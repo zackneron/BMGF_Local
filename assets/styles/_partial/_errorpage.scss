@@ -1,0 +1,52 @@
+.errorpage {
+    margin-bottom: 18.605vw;
+    @include spacingX(8.372vw);
+    @include md {
+        @include spacingX(7.031vw);
+        margin-bottom: 5.156vw;
+    }
+    .error-content {
+        background-color: var(--unnamed-color-blue);
+        border-radius: .8rem;
+        text-align: center;
+        // padding-top: 18.605vw;
+        // padding-bottom: 18.605vw;
+        @include spacing(18.605vw, 7.209vw);
+        @include md {
+            @include spacing(8.958vw, 0);
+            // padding-top: 8.958vw;
+            // padding-bottom: 5.156vw;
+        }
+        
+        h1 {
+            color: #A6FFFA;
+            margin-bottom: 8.372vw;
+            font-size: 20vw;
+            @include md {
+                font-size: 17.188vw;
+                margin-bottom: 2.344vw;
+            }
+        }
+
+        p {
+            color: var(--unnamed-color-ffffff);
+            font-size: var(--font-size-20-mobile);
+            margin-bottom: 8.372vw;
+            @include md {
+                font-size: var(--font-size-30);
+                margin-bottom: 5.208vw;
+            }
+        }
+        .button {
+            background-color: #A6FFFA;
+            color: var(--unnamed-color-blue);
+            margin: auto;
+            width: 47.674vw;
+            font-size: 1.8rem;
+            justify-content: center;
+            @include md {
+                width: 14.583vw;
+            }
+        }
+    }
+}

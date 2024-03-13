@@ -1,0 +1,37 @@
+.arrow-icon {
+    height: 15px;
+}
+.autopan-icon {
+    height: 22px;
+}
+
+.pin_thumb {
+    margin-bottom: 20px;
+    display: inline-block;
+    // margin-top: 40px;
+    & img {
+        max-width: 45px;
+
+        @include md {
+            max-width: 100%;
+        }
+    }
+}
+// .location-pin {
+//     position: relative;
+//     height: 135px;
+//     top: -20%;
+//     @include md {
+//         height: 182px;
+//     }
+// }
+
+.fluffi-move {
+    position: absolute;
+    z-index: 1000;
+    right: -21%;
+    bottom: 0;
+    max-width: 11vw;
+    transform-origin: bottom;
+    transition: all cubic-bezier(0.34, 0.57, 0.21, 0.99) 1s;
+}

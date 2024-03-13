@@ -1,0 +1,12 @@
+$pink: #FF3877;
+$white: #FFFFFF;
+
+.pink-theme {
+    h3,p {
+        color: $pink;
+    }
+    button {
+        color: $white;
+        background-color: $pink;
+    }
+}

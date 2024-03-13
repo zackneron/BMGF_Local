@@ -1,0 +1,80 @@
+:root {
+
+    /* Colors: */
+    --unnamed-color-ffffff: #FFFFFF;
+    --unnamed-color-000000: #000000;
+    --unnamed-color-black22: #222222;
+    --unnamed-color-light-green: #00FFF2;
+    --unnamed-color-blue: #1014F4;
+    --unnamed-color-light-pink: #F1DBFF;
+    --unnamed-color-pink: #F304A7;
+    
+    /* Font/text values */
+    --unnamed-font-style-normal: normal;
+    --unnamed-font-weight-600: 600px;
+    --unnamed-font-weight-normal: normal;
+    --font-size-18: 0.938vw;  //18px (desktop text, links)
+    --font-size-18-mobile: 4.186vw; // 18px mobile
+    --font-size-14: 3.256vw; // 14px (mobile text, subtext, h1 subtext)
+    --font-size-30: 1.563vw; // 30px (404 text desktop)
+    --font-size-20-mobile: 4.651vw; // 20px (404 text mobile)
+    --font-size-40: 9.302vw; // 40px (mobile h2, h3)
+    --font-size-47: 2.448vw; // 47px (h3 desktop)
+    --font-size-77: 4.01vw; // 77px (desktop h2)
+    --font-size-29: 1.536vw; // 29px (subtext desktop)
+    --font-size-125: 6.51vw; // 125px (desktop h1)
+    --font-size-24: 1.25vw; // 24px (h1 subtext desktop)
+    --unnamed-character-spacing-0: 0px;
+    --unnamed-line-spacing-32: 32px;
+    --unnamed-line-spacing-35: 35px;
+    --unnamed-line-spacing-80: 80px;
+    --unnamed-line-spacing-120: 120px;
+
+}
+    
+/* Character Styles */
+.h1-heading {
+    font-family: var(--unnamed-font-family-gill-sans);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-600);
+    font-size: var(--unnamed-font-size-120);
+    line-height: var(--unnamed-line-spacing-120);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-d9b8fc);
+
+    &--secondary {
+        color: var(--unnamed-color-ffffff);
+    }
+}
+.h2-heading {
+    font-family: var(--unnamed-font-family-gill-sans);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-600);
+    font-size: var(--unnamed-font-size-80);
+    line-height: var(--unnamed-line-spacing-80);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+
+    &--secondary {
+        color: var(--unnamed-color-d9b8fc);
+    }
+}
+
+.p-text {
+    font-family: var(--unnamed-font-family-gill-sans);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-25);
+    line-height: var(--unnamed-line-spacing-35);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+}
+.sub-text {
+    font-family: var(--unnamed-font-family-gill-sans);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-600);
+    font-size: var(--unnamed-font-size-30);
+    line-height: var(--unnamed-line-spacing-32);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+}

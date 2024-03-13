@@ -1,0 +1,281 @@
+@keyframes animatedBird {
+	from { background-position: top 200px left -45px, bottom 23px right -30px; }
+	to { background-position: top 250px left 45px, bottom 33px right 30px; }
+}
+
+.modal-holder__inner {
+    padding: 0 20px;
+    @include md {
+        padding: 0;
+    }
+    .inner-wrap {
+        padding-top: 150px;
+        @include xlg {
+            padding-top: 90px;
+        }
+    }
+}
+
+.steps-container {
+    // border-radius: 40px;
+    position: relative;
+    max-width: 902px;
+    width: 100%;
+    transform: translatey(50px);
+    @include md {
+        transform: translatey(80px);
+    }
+    @include xlg {
+        transform: translatey(50px);
+    }
+    .steps-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(/mzansi360/images/header-bg-line.svg) no-repeat 0 -15px;
+            background-size: 100%;
+            z-index: 3;
+        }
+    }
+    .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        border: none;
+        background: transparent;
+        z-index: 31;
+        cursor: pointer;
+    }
+    .swiper-wrapper--steps {
+        padding-top: 110px;
+    }
+    .fluffy-image {
+        position: absolute;
+        margin-top: -85px;
+        z-index: 20;
+        height: auto;
+        max-width: 40%;
+        @media (max-width: 429px) {
+            margin-top: -55px;
+            max-width: 200px;
+        }
+        @include md {
+            margin-top: -100px;
+        }
+        &.fluffy-image--boat {
+            max-width: 40%;
+            width: 100%;
+            height: auto;
+            margin-top: -50px;
+            @media (max-width: 429px) {
+                margin-top: -35px;
+            }
+            @include sm {
+                max-width: 270px;
+            }
+            @include xlg {
+                max-width: 295px;
+            }
+        }
+        &--digging {
+            margin-top: -20px;
+        }
+    }
+    .card-header {
+        text-align: center;
+        position: relative;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .card-body {
+        padding: 52px 20px;
+        padding-bottom: 52px;
+        text-align: center;
+        background: var(--unnamed-color-3b1468);
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        z-index: 4;
+        @include md {
+            padding: 0 0 81px 0 ;
+            // padding-bottom: 81px;
+        }
+
+        &__list {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            gap: 30px;
+            color: var(--unnamed-color-d9b8fc);
+
+            & .item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+    }
+    .next-step-item {
+        margin-top: 105px;
+    }
+}
+
+.card-header {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background: transparent;
+        background: linear-gradient(180deg, var(--unnamed-color-d9b8fc) 0%, #EDD183 100%);
+        z-index: 0;
+    }
+        
+    &:before {
+        // content: '';
+        // position: absolute;
+        // top: 10%;
+        // left: 0;
+        // width: 100%;
+        // height: 100%;
+        // background: url(/mzansi360/images/header-bg-line.svg) no-repeat 13% 101%;
+        // background-size: 100%;
+        // z-index: 1;
+        // @include md {
+        //     top: 0;
+        // }
+    }
+    .fluffy {
+        &--fox {
+            transform: translateX(-120%) rotate(-15deg) !important;
+        }
+    }
+    .thumbnail {
+        position: relative;
+        // left: 0;
+        // bottom: 0;
+        // right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        // object-fit: cover;
+    }
+}
+
+.card-body {
+    .image-holder {
+        background-color: var(--unnamed-color-edd183);
+        // width: 50px;
+        // height: 50px;
+        border-radius: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        @include md {
+            width: 78px;
+            height: 78px;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    .video-holder--zoom {
+        height: 53px;
+        @include md {
+            width: 114px;
+            height: auto;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+#modalHolder {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background-image: url(/mzansi360/images/eggs-left.svg), url(/mzansi360/images/eggs-right.svg);
+	background-position: top 140px left -75px, bottom 23px right -30px;
+	background-repeat: no-repeat;
+    animation: animatedBird 25s linear infinite;
+    @include md {
+        background-position: top 260px left -50px, bottom 23px right -30px;
+	    background-repeat: no-repeat;
+    }
+}
+
+.content-heading {
+    font-size: 45px;
+    line-height: 47px;
+    margin: auto;
+    margin-bottom: 36px;
+    @include md {
+        font-size: 60px;
+        line-height: 65px;
+        max-width: 80%;
+    }
+
+    @include lg {
+        font-size: 70px;
+        line-height: 75px;
+        margin-bottom: 36px;
+    }
+    @include xlg {
+        font-size: 90px;
+        line-height: 95px;
+    }
+}
+.content-text {
+    font-size: 14px;
+    line-height: 25px;
+    margin: auto;
+    margin-bottom: 30px;
+    @include md {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 40px;
+        max-width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.item {
+    & .item__text {
+        font-size: 12px;
+        line-height: 15px;
+        padding-top: 40px;
+        // padding-bottom: 40px;
+        @include lg {
+            font-size: 15px;
+            line-height: 20px;
+            max-width: 126px;
+            padding-top: 24px;
+            // padding-bottom: 24px;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 #693DA7; }
+}

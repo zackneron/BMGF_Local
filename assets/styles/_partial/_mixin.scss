@@ -1,0 +1,59 @@
+@mixin transition($x) {
+    transition: $x;
+    -webkit-transition: $x;
+    -moz-transition: $x;
+    -ms-transition: $x;
+    -o-transition: $x;
+}
+
+@mixin animation($a){
+    -webkit-animation: $a;
+    -khtml-animation: $a;
+    -moz-animation: $a;
+    -ms-animation: $a;
+    -o-animation: $a;
+}
+
+@mixin spacingX($n) {
+    padding-left: $n;
+    padding-right: $n;
+}
+@mixin spacing($optional: null, $n) {
+    padding-left: $n;
+    padding-right: $n;
+    @if($optional != null) {
+        padding-top: $optional;
+        padding-bottom: $optional;
+    }
+}
+
+@mixin borderGradient($direction, $color){
+    @if($direction == 180deg){
+        background: linear-gradient(180deg, $color, transparent);
+    } @else if($direction ==  0deg){
+        background: linear-gradient(0deg, $color, transparent);
+    }
+    border-radius: .8rem;
+    backdrop-filter: blur(5rem);
+    padding: 2px;
+}
+// @mixin spacingY($n) {
+//     padding-top: $n;
+//     padding-bottom: $n;
+// }
+
+@mixin cardBorderGradient($position, $color, $start, $end){
+    padding: 2px;
+    background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0% / 8px 8px no-repeat, 
+    radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0% / 8px 8px no-repeat, 
+    radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100% / 8px 8px no-repeat, 
+    radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100% / 8px 8px no-repeat, 
+    linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50% / calc(100% - 10px) calc(100% - 16px) no-repeat, 
+    linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50% / calc(100% - 16px) calc(100% - 10px) no-repeat, 
+    linear-gradient($position, $color $start, transparent $end);
+    border-radius: .8rem;
+    box-sizing: border-box;
+}
+
+// 330deg bottom angle
+// 140deg top angle

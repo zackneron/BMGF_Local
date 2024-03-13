@@ -1,0 +1,82 @@
+.newest-section {
+    color: var(--unnamed-color-ffffff);
+    background-image: url(../images/red-paint-newest-section.png);
+    background-position: left bottom;
+    background-size: 185%;
+    background-repeat: no-repeat;
+    @include spacingX(8.372vw);
+    @include md {
+        background-size: 100%;
+        @include spacingX(7.031vw);
+    }
+
+    .card-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16.279vw;
+        padding-bottom: 27.907vw;
+        @include md {
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 1.979vw;
+            padding-bottom: 13.438vw;
+        }
+    }
+
+    &__content {
+        margin-bottom: 9.459vw;
+        text-align: center;
+        @include md {
+            margin-bottom: 5.625vw;
+        }
+        .newest-section-featured {
+            font-size: var(--font-size-14);
+            text-transform: uppercase;
+            opacity: .5;
+            margin-bottom: 4rem;
+            @include md {
+                font-size: var(--font-size-18);
+                margin-bottom: 4.6rem;
+            }
+        }
+        h2 {
+            font-size: var(--font-size-40);
+            margin-bottom: .7rem;
+            font-weight: 700        ;
+            @include md {
+                font-size: var(--font-size-77);
+                margin-bottom: 3.3rem;
+                line-height: 110%;
+            }
+        }
+        p {
+            font-size: var(--font-size-14);
+            @include md {
+                font-size: var(--font-size-18);
+                line-height: 2.031vw;
+                height: 7.5rem;
+            }
+        }
+    }
+
+    .newest-section-content {
+        @include spacing(9.302vw,6.047vw);
+        @include md {
+            @include spacing(2.969vw,3.125vw);
+        }
+        .content {
+            @include md {
+                height: 3.906vw;
+            }
+        }
+    }
+
+    .card-topthumb {
+        @include borderGradient(180deg, #FF3877);
+        flex-basis: 31.33%;
+        &__wrapper {
+            background-color: var(--unnamed-color-black22);
+            border-radius: .8rem;
+        }
+    }
+}

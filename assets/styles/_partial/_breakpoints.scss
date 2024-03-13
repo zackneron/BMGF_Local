@@ -1,0 +1,42 @@
+@mixin sm {
+    @media (min-width: 768px) {
+        @content;
+    } 
+}
+
+@mixin md {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin xlg {
+    @media (min-width: 1920px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: 992px) and (min-width: 768px) {
+        @content;
+    }
+}
+
+/*
+TO BE USED AS FOLLOW IN A PARTIAL FILE
+
+.container {
+    text-align: center;
+    @include sm {
+        text-align: left;
+        padding: 6rem 0 6.1rem;
+    }
+}
+
+*/

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/styles/swipper@11.0.7.min.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <title>BMGF - ForeverWena</title>
+</head>
+<body>
+    <header class="navbar         ">
+        <div class="mobile-only">
+            <a href="/" class="logo">
+                <img src="./assets/images/ForeverWena-logo.svg" alt="ForeverWena logo">
+            </a>
+            <div class="menu-toggle"></div>
+        </div>
+        <nav>
+            <ul class="navbar__menu">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+                <li class="dropdown">
+                    <a href="/news.html" class="active">News</a>
+                    <span class="carrot"></span>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Submenu Item 1</a></li>
+                        <li><a href="#">Submenu Item 2</a></li>
+                        <li><a href="#">Submenu Item 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner-section banner-section--articles">
+        <div class="banner-content-wrap">
+            <h1>Be in the know and choose #ForeverWena</h1>
+            <p>
+                Explore our library of educational articles covering a spectrum of topics. 
+                From safe sex and protection to navigating important conversations about sexual health, 
+                learn more about owning your sexual health journey.
+            </p>
+        </div>
+    </section>
+    <section class="articles-section">
+        <div class="articles__tabs" id="articles__tabs">
+            <button class="tab-btn" data-title="all" onclick="filterArticles(this.dataset.title, 'all')">All</button>
+            <button class="tab-btn" data-title="safe-sex" onclick="filterArticles(this.dataset.title, 'safe-sex')">Safe Sex</button>
+            <button class="tab-btn" data-title="sexual-wellbeing" onclick="filterArticles(this.dataset.title, 'sexual-wellbeing')">Sexual Wellbeing</button>
+            <button class="tab-btn" data-title="hiv" onclick="filterArticles(this.dataset.title, 'hiv')">HIV</button>
+        </div>
+        <div class="articles__tab-panels">
+            <div class="tab-item safe-sex">
+                <div class="card card--with-footer">
+                    <div class="tab-panel">
+                        <div class="card__thumbnail">
+                            <img src="./assets/images/article-1-green.png" alt="safe-sex">
+                            <div class="article-caption">safe sex</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Navigating Healing: When sex turns violent</h3>
+                            <p class="content">
+                                Having sex should be consensual, respectful, and empowering. However, there are instances...
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="./assets/images/article-arrow-rigth-green.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-item safe-sex">
+                <div class="card card--with-footer">
+                    <div class="tab-panel">
+                        <div class="card__thumbnail">
+                            <img src="./assets/images/article-2-green.png" alt="safe-sex">
+                            <div class="article-caption">safe sex</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Navigating Healing: When sex turns violent</h3>
+                            <p class="content">
+                                Having sex should be consensual, respectful, and empowering. However, there are instances...
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="./assets/images/article-arrow-rigth-green.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-item safe-sex">
+                <div class="card card--with-footer">
+                    <div class="tab-panel">
+                        <div class="card__thumbnail">
+                            <img src="./assets/images/article-3-green.png" alt="safe-sex">
+                            <div class="article-caption">safe sex</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Article 3</h3>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="./assets/images/article-arrow-rigth-green.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            
+            <div class="tab-item sexual-wellbeing">
+                <div class="card card--with-footer">
+                    <div class="tab-panel">
+                        <div class="card__thumbnail">
+                            <img src="./assets/images/article-1-blue.png" alt="sexual-wellbeing">
+                            <div class="article-caption">sexual wellbeing</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Article 3</h3>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="./assets/images/article-arrow-rigth-grey.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-item sexual-wellbeing">
+                <div class="card card--with-footer">
+                    <div class="tab-panel">
+                        <div class="card__thumbnail">
+                            <img src="./assets/images/article-2-blue.png" alt="sexual-wellbeing">
+                            <div class="article-caption">sexual wellbeing</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Article 3</h3>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="./assets/images/article-arrow-rigth-grey.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="tab-item sexual-wellbeing">
+                <div class="card card--with-footer">
+                    <div class="tab-panel">
+                        <div class="card__thumbnail">
+                            <img src="./assets/images/article-3-blue.png" alt="sexual-wellbeing">
+                            <div class="article-caption">sexual wellbeing</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Article 3</h3>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="./assets/images/article-arrow-rigth-grey.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-item hiv">
+                <div class="card card--with-footer">
+                    <div class="tab-panel">
+                        <div class="card__thumbnail">
+                            <img src="./assets/images/article-1-red.png" alt="hiv">
+                            <div class="article-caption">hiv</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Article 1</h3>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="./assets/images/article-arrow-rigth-red.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-item hiv">
+                <div class="card card--with-footer">
+                    <div class="tab-panel">
+                        <div class="card__thumbnail">
+                            <img src="./assets/images/article-2-red.png" alt="hiv">
+                            <div class="article-caption">hiv</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Article 2</h3>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="./assets/images/article-arrow-rigth-red.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="tab-item hiv">
+                <div class="card card--with-footer">
+                    <div class="tab-panel">
+                        <div class="card__thumbnail">
+                            <img src="./assets/images/article-3-red.png" alt="hiv">
+                            <div class="article-caption">hiv</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Article 3</h3>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="./assets/images/article-arrow-rigth-red.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="tab-panel sexual-wellbeing">2</div>
+            <div class="tab-panel safe-sex">3</div>
+            <div class="tab-panel hiv">4</div>
+            <div class="tab-panel sexual-wellbeing">5</div>
+            <div class="tab-panel hiv">6</div> -->
+        </div>
+        <button class="button m-auto">
+            View More
+            <img src="./assets/images/arrow-down.svg" alt="Arrow right">
+        </button>
+    </section>
+    <footer>
+        <nav class="footer-nav">
+            <div class="footer-logo">
+                <a href="/"><img src="./assets/images/ForeverWena-logo.svg" alt="ForeverWena logo"></a>
+            </div>
+            <div class="footer__menu">
+                <ul class="page-list">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/news.html">News</a></li>
+                    <li><a href="#">whatsApp Bot</a></li>
+                </ul>
+                <ul class="social-media">
+                    <li><a href="/">
+                        <img src="./assets/images/facebook.svg" alt="Facebook" />
+                    </a></li>
+                    <li><a href="#">
+                        <img src="./assets/images/twitter.svg" alt="Twitter" />
+                    </a></li>
+                    <li><a href="#">
+                        <img src="./assets/images/instagram.svg" alt="Instagram" />
+                    </a></li>
+                    <li><a href="#">
+                        <img src="./assets/images/youtube.svg" alt="Youtube" />
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="copyright">
+            <span>All Rights Reserved | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>  | <a href="#">Legal</a></span>
+        </div>
+    </footer>
+    <script src="./assets/scripts/script.js"></script>
+</body>
+</html>

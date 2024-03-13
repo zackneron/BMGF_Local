@@ -1,0 +1,158 @@
+
+.banner-section {
+    color: var(--unnamed-color-ffffff);
+    position: relative;
+    background-size: cover;
+    padding-top: 41.86vw;
+    // background-position: 85% 0;
+    // padding-bottom: 0.442vw;
+    background-repeat: no-repeat;
+    height: 180vw;
+    background-position: 30% 0;
+    position: relative;
+    // margin-bottom: 27.027vw;
+    &.banner-section--homepage {
+        background-image: url(../images/homepage-banner.png);
+        // background-size: 122vh;
+        background-position: 85% 0;
+        @include sm {
+            background-size: 150vh;
+        }
+        @include md {
+            background-size: cover;
+        }
+    }
+    &.banner-section--aboutpage {
+        background-image: url(../images/about-bg-image.png);
+        margin-bottom: 27.027vw;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: 100%;
+            background-image: url(../images/about-bg-effet.png);
+            left: 0;
+            right: 0;
+            bottom: -8rem;
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            @include tablet {
+                bottom: -19.531vw;
+            }
+            @include md {
+                background-size: 90.104vw;
+                bottom: -2.604vw;
+            }
+        }
+        @include md {
+            margin-bottom: 11.979vw;
+            position: relative;
+        }
+    }
+    &.banner-section--news {
+        background-image: url(../images/newspage-bg-mobile.png);
+        // background-position: 30% 0;
+        @include md {
+            background-image: url(../images/newspage-bg.png);
+        }
+    }
+    &.banner-section--articles {
+        background-image: url(../images/articles-bg-banner.png);
+        background-position: 50% 0;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: 50%;
+            background-image: url(../images/articles-bottom-bg-banner.png);
+            left: 0;
+            right: 0;
+            bottom: -4rem;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            @include tablet {
+                bottom: -19.531vw;
+            }
+            @include md {
+                background-size: 39.104vw;
+                bottom: -2.604vw;
+            }
+        }
+        @include md {
+            background-image: url(../images/articles-bg-banner.png);
+        }
+
+        & .banner-content-wrap {
+            @include md {
+                max-width: 85vw;
+
+                 p {
+                    max-width: 50.677vw;
+                 }
+            }
+        }
+    }
+    @include sm {
+        background-position: 100%;
+        padding-top: 25.86vw;
+        height: 55.365vw;
+    }
+    @include spacingX(3.6rem);
+    @include tablet {
+        height: 75rem;
+    }
+    @include md {
+        @include spacingX(7.2rem);
+        background-size: 100%;
+        background-position: top;
+        padding-top: 13.021vw;
+        padding-bottom: 13.021vw;
+    }
+
+    .banner-content-wrap {
+        position: relative;
+        z-index: 2;
+        @include md {
+            max-width: 46.458vw;
+        }
+    }
+
+    h1 {
+        font-size:var(--font-size-40);
+        line-height: 100%;
+        margin-bottom: 1.5rem;
+        @include tablet {
+            font-size: 5rem;
+        }
+        @include md {
+            font-size: var(--font-size-125);
+            margin-bottom: 4.5rem;
+        }
+        
+    }
+    p {
+        font-size: var(--font-size-14);
+        line-height: 150%;
+        margin-bottom: 4rem;
+        @include tablet {
+            font-size: 1.8rem;
+        }
+        @include md {
+            font-size: var(--font-size-24);
+            margin-bottom: 5.3rem;
+        }
+    }
+    .button {
+        margin-bottom: 18.535vw;
+        font-size: var(--font-size-14);
+        @include tablet {
+            font-size: 1.8rem;
+        }
+        @include md {
+            margin-bottom: 13.021vw;
+            font-size: var(--font-size-18);
+        }
+    }
+}
