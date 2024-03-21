@@ -1,3 +1,42 @@
+.articles__tabs {
+    margin-bottom: 15vw;
+    margin-top: 5vw;
+    @include md {
+        margin-bottom: 7.813vw;
+    }
+    .tab-btn {
+        display: block;
+        margin-bottom: 2rem;
+        background-color: transparent;
+        border: 2px solid #646464;
+        border-radius: 4rem;
+        color: #646464;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        padding: 1.6rem 5.4rem;
+        min-width: 15rem;
+        text-align: center;
+        &.active,
+        &:hover {
+            border-color: var(--unnamed-color-light-green) ;
+            color: var(--unnamed-color-light-green);
+        }
+        &:not(:last-child){
+            margin-right: 0;
+        }
+
+        @include md {
+            display: inline-block;
+            &:not(:last-child){
+                margin-right: 2rem; 
+            }
+        }
+        @include lg {
+            margin-bottom: 0;
+        }
+    }
+}
+
 .tab-item {
     display: none;
     // flex-basis: 28.49vw;
@@ -32,42 +71,43 @@
         @include spacingX(4.375vw);
         padding-bottom: 11.979vw ;
     }
-    .articles__tabs {
-        margin-bottom: 15vw;
-        margin-top: 5vw;
-        @include md {
-            margin-bottom: 7.813vw;
-        }
-        .tab-btn {
-            display: block;
-            margin-bottom: 20px;
-            background-color: transparent;
-            border: 2px solid #646464;
-            border-radius: 4rem;
-            color: #646464;
-            text-transform: uppercase;
-            font-size: 1.8rem;
-            padding: 1.6rem 2rem;
-            min-width: 15rem;
-            text-align: center;
-            &.active {
-                border-color: var(--unnamed-color-light-green) ;
-                color: var(--unnamed-color-light-green);
-            }
-            &:not(:last-child){
-                margin-bottom: 20px;
-                margin-right: 0;
-            }
+    // .articles__tabs {
+    //     margin-bottom: 15vw;
+    //     margin-top: 5vw;
+    //     @include md {
+    //         margin-bottom: 7.813vw;
+    //     }
+    //     .tab-btn {
+    //         display: block;
+    //         margin-bottom: 20px;
+    //         background-color: transparent;
+    //         border: 2px solid #646464;
+    //         border-radius: 4rem;
+    //         color: #646464;
+    //         text-transform: uppercase;
+    //         font-size: 1.8rem;
+    //         padding: 1.6rem 5.4rem;
+    //         min-width: 15rem;
+    //         text-align: center;
+    //         &.active,
+    //         &:hover {
+    //             border-color: var(--unnamed-color-light-green) ;
+    //             color: var(--unnamed-color-light-green);
+    //         }
+    //         &:not(:last-child){
+    //             margin-bottom: 20px;
+    //             margin-right: 0;
+    //         }
 
-            @include md {
-                display: inline-block;
-                &:not(:last-child){
-                    margin-right: 2rem;
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
+    //         @include md {
+    //             display: inline-block;
+    //             &:not(:last-child){
+    //                 margin-right: 2rem;
+    //                 margin-bottom: 0;
+    //             }
+    //         }
+    //     }
+    // }
     .articles__tab-panels {
         // display: flex;
         // align-items: center;
@@ -88,7 +128,7 @@
             }
         }
     
-        & .safe-sex {
+        & .sexual-health {
             .card--with-footer {
                 // @include borderGradient(0deg, var(--unnamed-color-light-green));
                 @include cardBorderGradient(330deg, var(--unnamed-color-light-green), 27%, 43%);
@@ -104,7 +144,7 @@
             }
         }
 
-        .sexual-wellbeing {
+        .sex-positivity {
             .card--with-footer {
                 // @include borderGradient(0deg, var(--unnamed-color-blue));
                 @include cardBorderGradient(330deg, var(--unnamed-color-blue), 27%, 43%);
@@ -121,7 +161,7 @@
             }
         }
 
-        .hiv {
+        .consent-and-agency {
             .card--with-footer {
                 // @include borderGradient(0deg, #D3003A);
                 @include cardBorderGradient(330deg, #D3003A, 27%, 43%);

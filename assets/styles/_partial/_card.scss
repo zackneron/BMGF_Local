@@ -214,9 +214,9 @@
 
                 img {
                     height: 2rem;
-                    @include md {
-                        height: var(--font-size-18);
-                    }
+                    // @include md {
+                    //     height: var(--font-size-18);
+                    // }
                 }
             }
         }

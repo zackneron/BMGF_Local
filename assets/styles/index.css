@@ -128,14 +128,14 @@ body {
   padding: 0;
   margin: 0;
 }
-body .body--homepage {
+body.body--homepage {
   background-image: url(../images/body-paint-splatter.png), url(../images/red-paint-homepage-bottom.png);
   background-repeat: no-repeat, no-repeat;
   background-position: top center, bottom right;
-  background-size: 100%, 80%;
+  background-size: 100%, 140%;
 }
 @media (min-width: 992px) {
-  body .body--homepage {
+  body.body--homepage {
     background-size: 100%, 60%;
   }
 }
@@ -253,11 +253,12 @@ body .body--homepage {
 }
 .navbar__menu li ul {
   position: absolute;
-  left: 0;
+  right: -2rem;
   width: 37.5rem;
   background-color: var(--unnamed-color-black22);
   padding: 2.4rem 6.2rem;
   display: none;
+  z-index: 1;
 }
 .navbar__menu li ul li {
   position: relative;
@@ -266,7 +267,7 @@ body .body--homepage {
 .navbar__menu li ul li a {
   color: #C2C7E0;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar__menu li ul li a {
     line-height: 3.8rem;
   }
@@ -285,7 +286,7 @@ body .body--homepage {
   right: 2rem;
   transition: all 0.3s linear;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar__menu .dropdown:after {
     right: -2rem;
   }
@@ -383,26 +384,76 @@ body .body--homepage {
   color: var(--unnamed-color-ffffff);
   position: relative;
   background-size: cover;
-  padding-top: 41.86vw;
+  padding-top: 32rem;
   background-repeat: no-repeat;
-  height: 180vw;
+  height: 64rem;
   background-position: 30% 0;
   position: relative;
   padding-left: 3.6rem;
   padding-right: 3.6rem;
 }
+@media (min-width: 768px) {
+  .banner-section {
+    background-position: 100%;
+    background-size: cover;
+    padding-top: 25.86vw;
+    height: 55.365vw;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .banner-section {
+    height: 75rem;
+  }
+}
+@media (min-width: 992px) {
+  .banner-section {
+    padding-left: 7.2rem;
+    padding-right: 7.2rem;
+    background-size: 100%;
+    background-position: top;
+    padding-top: 13.021vw;
+    padding-bottom: 13.021vw;
+  }
+}
 .banner-section.banner-section--homepage {
   background-image: url(../images/homepage-banner.png);
   background-position: 85% 0;
+  margin-bottom: 7.7rem;
+}
+.banner-section.banner-section--homepage:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 90%;
+  background-size: 100%;
+  background-image: url(../images/home-bg-effet.png);
+  left: auto;
+  right: 0;
+  bottom: -20%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .banner-section.banner-section--homepage:after {
+    bottom: -30%;
+    width: 40%;
+  }
+}
+@media (min-width: 992px) {
+  .banner-section.banner-section--homepage:after {
+    width: 20.833vw;
+    bottom: -30%;
+  }
 }
 @media (min-width: 768px) {
   .banner-section.banner-section--homepage {
-    background-size: 150vh;
+    margin-bottom: 10vw;
   }
 }
 @media (min-width: 992px) {
   .banner-section.banner-section--homepage {
     background-size: cover;
+    margin-bottom: 13.021vw;
   }
 }
 .banner-section.banner-section--aboutpage {
@@ -525,30 +576,22 @@ body .body--homepage {
     margin-bottom: 1.979vw;
   }
 }
+.banner-section.banner-section--article .banner-content-wrap button.button--article-sex-positivity {
+  border-color: #A8A9FE;
+  color: #A8A9FE;
+}
+.banner-section.banner-section--article .banner-content-wrap button.button--article-consent-and-agency {
+  border-color: #D3003A;
+  color: #D3003A;
+}
 .banner-section.banner-section--article .banner-content-wrap p {
   max-width: 100%;
 }
-@media (min-width: 768px) {
-  .banner-section {
-    background-position: 100%;
-    padding-top: 25.86vw;
-    height: 55.365vw;
-  }
+.banner-section.banner-sex-positivity {
+  background-image: url(../images/Masturbation.png);
 }
-@media only screen and (max-width: 992px) and (min-width: 768px) {
-  .banner-section {
-    height: 75rem;
-  }
-}
-@media (min-width: 992px) {
-  .banner-section {
-    padding-left: 7.2rem;
-    padding-right: 7.2rem;
-    background-size: 100%;
-    background-position: top;
-    padding-top: 13.021vw;
-    padding-bottom: 13.021vw;
-  }
+.banner-section.banner-consent-and-agency {
+  background-image: url(../images/Own-your-agency.png);
 }
 .banner-section .banner-content-wrap {
   position: relative;
@@ -560,14 +603,9 @@ body .body--homepage {
   }
 }
 .banner-section h1 {
-  font-size: var(--font-size-40);
+  font-size: 4rem;
   line-height: 100%;
   margin-bottom: 1.5rem;
-}
-@media only screen and (max-width: 992px) and (min-width: 768px) {
-  .banner-section h1 {
-    font-size: 5rem;
-  }
 }
 @media (min-width: 992px) {
   .banner-section h1 {
@@ -576,7 +614,7 @@ body .body--homepage {
   }
 }
 .banner-section p {
-  font-size: var(--font-size-14);
+  font-size: 1.4rem;
   line-height: 150%;
   margin-bottom: 4rem;
 }
@@ -761,11 +799,6 @@ a:focus {
 
 .learn-more-btn {
   font-size: 1.8rem;
-}
-@media (min-width: 992px) {
-  .learn-more-btn {
-    font-size: var(--font-size-18);
-  }
 }
 .learn-more-btn:hover {
   text-decoration: underline;
@@ -1025,11 +1058,6 @@ a:focus {
 }
 .card.card--with-footer .card-footer .learn-more-btn img {
   height: 2rem;
-}
-@media (min-width: 992px) {
-  .card.card--with-footer .card-footer .learn-more-btn img {
-    height: var(--font-size-18);
-  }
 }
 
 .card-section {
@@ -1560,6 +1588,49 @@ a:focus {
   }
 }
 
+.articles__tabs {
+  margin-bottom: 15vw;
+  margin-top: 5vw;
+}
+@media (min-width: 992px) {
+  .articles__tabs {
+    margin-bottom: 7.813vw;
+  }
+}
+.articles__tabs .tab-btn {
+  display: block;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border: 2px solid #646464;
+  border-radius: 4rem;
+  color: #646464;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  padding: 1.6rem 5.4rem;
+  min-width: 15rem;
+  text-align: center;
+}
+.articles__tabs .tab-btn.active, .articles__tabs .tab-btn:hover {
+  border-color: var(--unnamed-color-light-green);
+  color: var(--unnamed-color-light-green);
+}
+.articles__tabs .tab-btn:not(:last-child) {
+  margin-right: 0;
+}
+@media (min-width: 992px) {
+  .articles__tabs .tab-btn {
+    display: inline-block;
+  }
+  .articles__tabs .tab-btn:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .articles__tabs .tab-btn {
+    margin-bottom: 0;
+  }
+}
+
 .tab-item {
   display: none;
   margin-bottom: 5.865vw;
@@ -1603,45 +1674,6 @@ a:focus {
     padding-bottom: 11.979vw;
   }
 }
-.articles-section .articles__tabs {
-  margin-bottom: 15vw;
-  margin-top: 5vw;
-}
-@media (min-width: 992px) {
-  .articles-section .articles__tabs {
-    margin-bottom: 7.813vw;
-  }
-}
-.articles-section .articles__tabs .tab-btn {
-  display: block;
-  margin-bottom: 20px;
-  background-color: transparent;
-  border: 2px solid #646464;
-  border-radius: 4rem;
-  color: #646464;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  padding: 1.6rem 2rem;
-  min-width: 15rem;
-  text-align: center;
-}
-.articles-section .articles__tabs .tab-btn.active {
-  border-color: var(--unnamed-color-light-green);
-  color: var(--unnamed-color-light-green);
-}
-.articles-section .articles__tabs .tab-btn:not(:last-child) {
-  margin-bottom: 20px;
-  margin-right: 0;
-}
-@media (min-width: 992px) {
-  .articles-section .articles__tabs .tab-btn {
-    display: inline-block;
-  }
-  .articles-section .articles__tabs .tab-btn:not(:last-child) {
-    margin-right: 2rem;
-    margin-bottom: 0;
-  }
-}
 .articles-section .articles__tab-panels {
   text-align: center;
   margin-bottom: 8rem;
@@ -1654,51 +1686,51 @@ a:focus {
 .articles-section .articles__tab-panels > .tab-item:not(:last-child) {
   margin-right: 2%;
 }
-.articles-section .articles__tab-panels .safe-sex .card--with-footer {
+.articles-section .articles__tab-panels .sexual-health .card--with-footer {
   padding: 2px;
   background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, var(--unnamed-color-light-green) 27%, transparent 43%);
   border-radius: 0.8rem;
   box-sizing: border-box;
 }
-.articles-section .articles__tab-panels .safe-sex .article-caption {
+.articles-section .articles__tab-panels .sexual-health .article-caption {
   background-color: var(--unnamed-color-light-green);
 }
-.articles-section .articles__tab-panels .safe-sex .title {
+.articles-section .articles__tab-panels .sexual-health .title {
   color: var(--unnamed-color-light-green);
 }
-.articles-section .articles__tab-panels .safe-sex .learn-more-btn {
+.articles-section .articles__tab-panels .sexual-health .learn-more-btn {
   color: var(--unnamed-color-light-green);
 }
-.articles-section .articles__tab-panels .sexual-wellbeing .card--with-footer {
+.articles-section .articles__tab-panels .sex-positivity .card--with-footer {
   padding: 2px;
   background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, var(--unnamed-color-blue) 27%, transparent 43%);
   border-radius: 0.8rem;
   box-sizing: border-box;
 }
-.articles-section .articles__tab-panels .sexual-wellbeing .article-caption {
+.articles-section .articles__tab-panels .sex-positivity .article-caption {
   background-color: var(--unnamed-color-blue);
   color: var(--unnamed-color-ffffff);
 }
-.articles-section .articles__tab-panels .sexual-wellbeing .title {
+.articles-section .articles__tab-panels .sex-positivity .title {
   color: #C2C7E0;
 }
-.articles-section .articles__tab-panels .sexual-wellbeing .learn-more-btn {
+.articles-section .articles__tab-panels .sex-positivity .learn-more-btn {
   color: #C2C7E0;
 }
-.articles-section .articles__tab-panels .hiv .card--with-footer {
+.articles-section .articles__tab-panels .consent-and-agency .card--with-footer {
   padding: 2px;
   background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, #D3003A 27%, transparent 43%);
   border-radius: 0.8rem;
   box-sizing: border-box;
 }
-.articles-section .articles__tab-panels .hiv .article-caption {
+.articles-section .articles__tab-panels .consent-and-agency .article-caption {
   background-color: #D3003A;
   color: var(--unnamed-color-ffffff);
 }
-.articles-section .articles__tab-panels .hiv .title {
+.articles-section .articles__tab-panels .consent-and-agency .title {
   color: #D3003A;
 }
-.articles-section .articles__tab-panels .hiv .learn-more-btn {
+.articles-section .articles__tab-panels .consent-and-agency .learn-more-btn {
   color: #ED1559;
 }
 .articles-section .articles__tab-panels .article-caption {
@@ -1924,45 +1956,6 @@ a:focus {
     padding-bottom: 11.979vw;
   }
 }
-.article-section .articles__tabs {
-  margin-bottom: 15vw;
-  margin-top: 5vw;
-}
-@media (min-width: 992px) {
-  .article-section .articles__tabs {
-    margin-bottom: 7.813vw;
-  }
-}
-.article-section .articles__tabs .tab-btn {
-  display: block;
-  margin-bottom: 20px;
-  background-color: transparent;
-  border: 2px solid #646464;
-  border-radius: 4rem;
-  color: #646464;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  padding: 1.6rem 2rem;
-  min-width: 15rem;
-  text-align: center;
-}
-.article-section .articles__tabs .tab-btn.active {
-  border-color: var(--unnamed-color-light-green);
-  color: var(--unnamed-color-light-green);
-}
-.article-section .articles__tabs .tab-btn:not(:last-child) {
-  margin-bottom: 20px;
-  margin-right: 0;
-}
-@media (min-width: 992px) {
-  .article-section .articles__tabs .tab-btn {
-    display: inline-block;
-  }
-  .article-section .articles__tabs .tab-btn:not(:last-child) {
-    margin-right: 2rem;
-    margin-bottom: 0;
-  }
-}
 .article-section .articles__tab-panels {
   text-align: center;
   margin-bottom: 8rem;
@@ -1977,51 +1970,51 @@ a:focus {
 .article-section .articles__tab-panels > .tab-item:not(:last-child) {
   margin-right: 2%;
 }
-.article-section .articles__tab-panels .safe-sex .card--with-footer {
+.article-section .articles__tab-panels .sexual-health .card--with-footer {
   padding: 2px;
   background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, var(--unnamed-color-light-green) 27%, transparent 43%);
   border-radius: 0.8rem;
   box-sizing: border-box;
 }
-.article-section .articles__tab-panels .safe-sex .article-caption {
+.article-section .articles__tab-panels .sexual-health .article-caption {
   background-color: var(--unnamed-color-light-green);
 }
-.article-section .articles__tab-panels .safe-sex .title {
+.article-section .articles__tab-panels .sexual-health .title {
   color: var(--unnamed-color-light-green);
 }
-.article-section .articles__tab-panels .safe-sex .learn-more-btn {
+.article-section .articles__tab-panels .sexual-health .learn-more-btn {
   color: var(--unnamed-color-light-green);
 }
-.article-section .articles__tab-panels .sexual-wellbeing .card--with-footer {
+.article-section .articles__tab-panels .sex-positivity .card--with-footer {
   padding: 2px;
   background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, var(--unnamed-color-blue) 27%, transparent 43%);
   border-radius: 0.8rem;
   box-sizing: border-box;
 }
-.article-section .articles__tab-panels .sexual-wellbeing .article-caption {
+.article-section .articles__tab-panels .sex-positivity .article-caption {
   background-color: var(--unnamed-color-blue);
   color: var(--unnamed-color-ffffff);
 }
-.article-section .articles__tab-panels .sexual-wellbeing .title {
+.article-section .articles__tab-panels .sex-positivity .title {
   color: #C2C7E0;
 }
-.article-section .articles__tab-panels .sexual-wellbeing .learn-more-btn {
+.article-section .articles__tab-panels .sex-positivity .learn-more-btn {
   color: #C2C7E0;
 }
-.article-section .articles__tab-panels .hiv .card--with-footer {
+.article-section .articles__tab-panels .consent-and-agency .card--with-footer {
   padding: 2px;
   background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, #D3003A 27%, transparent 43%);
   border-radius: 0.8rem;
   box-sizing: border-box;
 }
-.article-section .articles__tab-panels .hiv .article-caption {
+.article-section .articles__tab-panels .consent-and-agency .article-caption {
   background-color: #D3003A;
   color: var(--unnamed-color-ffffff);
 }
-.article-section .articles__tab-panels .hiv .title {
+.article-section .articles__tab-panels .consent-and-agency .title {
   color: #D3003A;
 }
-.article-section .articles__tab-panels .hiv .learn-more-btn {
+.article-section .articles__tab-panels .consent-and-agency .learn-more-btn {
   color: #ED1559;
 }
 .article-section .articles__tab-panels .article-caption {
@@ -2095,36 +2088,83 @@ a:focus {
     font-size: var(--font-size-24);
   }
 }
-.article-section .article-content-section {
+.article-section .article-content-wrap-section {
   background-color: var(--unnamed-color-black22);
-  color: #D9D9D9;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%;
-  margin-bottom: 21.081vw;
+  border-radius: 0.8rem;
   padding-left: 7.838vw;
   padding-right: 7.838vw;
   padding-top: 5.946vw;
   padding-bottom: 5.946vw;
 }
 @media (min-width: 992px) {
-  .article-section .article-content-section {
-    font-size: var(--font-size-24);
+  .article-section .article-content-wrap-section {
     padding-left: 8rem;
     padding-right: 8rem;
     padding-top: 3.2rem;
     padding-bottom: 3.2rem;
-    margin-bottom: 13rem;
   }
 }
 @media (min-width: 1200px) {
-  .article-section .article-content-section {
+  .article-section .article-content-wrap-section {
     padding-left: 4.167vw;
     padding-right: 4.167vw;
     padding-top: 1.667vw;
     padding-bottom: 1.667vw;
+  }
+}
+.article-section .article-content-section {
+  padding: 2px;
+  background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, var(--unnamed-color-light-green) 27%, transparent 43%);
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+  margin-bottom: 21.081vw;
+  color: #D9D9D9;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+@media (min-width: 992px) {
+  .article-section .article-content-section {
+    font-size: var(--font-size-24);
+    margin-bottom: 13rem;
+    padding: 2px;
+    background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(345deg, var(--unnamed-color-light-green) 27%, transparent 43%);
+    border-radius: 0.8rem;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 1200px) {
+  .article-section .article-content-section {
     margin-bottom: 7.031vw;
+  }
+}
+.article-section .article-content-section.article-content-section--sex-positivity {
+  padding: 2px;
+  background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, #A8A9FE 27%, transparent 43%);
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .article-section .article-content-section.article-content-section--sex-positivity {
+    padding: 2px;
+    background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(345deg, #A8A9FE 27%, transparent 43%);
+    border-radius: 0.8rem;
+    box-sizing: border-box;
+  }
+}
+.article-section .article-content-section.article-content-section--consent-and-agency {
+  padding: 2px;
+  background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, var(--unnamed-color-pink) 27%, transparent 43%);
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .article-section .article-content-section.article-content-section--consent-and-agency {
+    padding: 2px;
+    background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(345deg, var(--unnamed-color-pink) 27%, transparent 43%);
+    border-radius: 0.8rem;
+    box-sizing: border-box;
   }
 }
 .article-section .article-content-section h4 {

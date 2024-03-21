@@ -3,23 +3,66 @@
     color: var(--unnamed-color-ffffff);
     position: relative;
     background-size: cover;
-    padding-top: 41.86vw;
+    padding-top: 32rem;
     // background-position: 85% 0;
     // padding-bottom: 0.442vw;
     background-repeat: no-repeat;
-    height: 180vw;
+    height: 64rem;
     background-position: 30% 0;
     position: relative;
     // margin-bottom: 27.027vw;
+    @include sm {
+        background-position: 100%;
+        background-size: cover;
+        padding-top: 25.86vw;
+        height: 55.365vw;
+    }
+    @include spacingX(3.6rem);
+    @include tablet {
+        height: 75rem;
+    }
+    @include md {
+        @include spacingX(7.2rem);
+        background-size: 100%;
+        background-position: top;
+        padding-top: 13.021vw;
+        padding-bottom: 13.021vw;
+    }
     &.banner-section--homepage {
         background-image: url(../images/homepage-banner.png);
         // background-size: 122vh;
         background-position: 85% 0;
+        margin-bottom: 7.7rem;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 90%;
+            background-size: 100%;
+            background-image: url(../images/home-bg-effet.png);
+            left: auto;
+            right: 0;
+            bottom: -20%;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+
+            @include tablet {
+                bottom: -30%; //20%;
+                width: 40%; //70%;
+            }
+            @include md {
+                // background-size: 90.104vw;
+                width: 20.833vw;
+                bottom: -30%;
+            }
+        }
         @include sm {
-            background-size: 150vh;
+            // background-size: 150vh;
+            margin-bottom: 10vw;
         }
         @include md {
             background-size: cover;
+            margin-bottom: 13.021vw;
         }
     }
     &.banner-section--aboutpage {
@@ -125,27 +168,25 @@
                 @include md {
                     margin-bottom: 1.979vw;
                 }
+                &.button--article-sex-positivity {
+                    border-color: #A8A9FE;
+                    color: #A8A9FE;
+                }
+                &.button--article-consent-and-agency {
+                    border-color: #D3003A;
+                    color: #D3003A;
+                }
             }
             p {
                 max-width: 100%;
             }
         }
     }
-    @include sm {
-        background-position: 100%;
-        padding-top: 25.86vw;
-        height: 55.365vw;
+    &.banner-sex-positivity {
+        background-image: url(../images/Masturbation.png);
     }
-    @include spacingX(3.6rem);
-    @include tablet {
-        height: 75rem;
-    }
-    @include md {
-        @include spacingX(7.2rem);
-        background-size: 100%;
-        background-position: top;
-        padding-top: 13.021vw;
-        padding-bottom: 13.021vw;
+    &.banner-consent-and-agency {
+        background-image: url(../images/Own-your-agency.png);
     }
 
     .banner-content-wrap {
@@ -157,20 +198,16 @@
     }
 
     h1 {
-        font-size:var(--font-size-40);
+        font-size: 4rem;
         line-height: 100%;
-        margin-bottom: 1.5rem;
-        @include tablet {
-            font-size: 5rem;
-        }
+        margin-bottom: 1.5rem;             
         @include md {
             font-size: var(--font-size-125);
             margin-bottom: 4.5rem;
         }
-        
     }
     p {
-        font-size: var(--font-size-14);
+        font-size: 1.4rem;
         line-height: 150%;
         margin-bottom: 4rem;
         @include tablet {

@@ -11,11 +11,11 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100%;
-    .body--homepage {
+    &.body--homepage {
       background-image: url(../images/body-paint-splatter.png),url(../images/red-paint-homepage-bottom.png);
       background-repeat: no-repeat, no-repeat;
       background-position: top center, bottom right;
-      background-size: 100%, 80%;
+      background-size: 100%, 140%;
       @include md {
         background-size: 100%, 60%;
       }

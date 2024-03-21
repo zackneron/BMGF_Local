@@ -39,9 +39,9 @@ a {
 
 .learn-more-btn {
     font-size: 1.8rem;
-    @include md {
-        font-size: var(--font-size-18);
-    }
+    // @include md {
+    //     font-size: var(--font-size-18);
+    // }
     &:hover {
         text-decoration: underline;
     }

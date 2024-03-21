@@ -42,19 +42,23 @@
 
             & ul {
                 position: absolute;
-                left: 0;
+                right: -2rem;
                 width: 37.5rem;
                 background-color: var(--unnamed-color-black22);
                 padding: 2.4rem 6.2rem;
                 display: none;
+                z-index: 1;
 
                 & li {
                     position: relative;
                     width: 100%;
+                    // &:not(:last-child){
+                    //     margin-bottom: 1.5rem;
+                    // }
 
                     a {
                         color: #C2C7E0;
-                        @include md {
+                        @include sm {
                             line-height: 3.8rem;
                         }
                     }
@@ -82,7 +86,7 @@
             position: absolute;
             right: 2rem;
             transition: all .3s linear;
-            @include md {
+            @include sm {
                 right: -2rem;
             }
         }
