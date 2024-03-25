@@ -53,6 +53,7 @@
         @include borderGradient(180deg, var(--unnamed-color-pink));
         position: relative;
         cursor: pointer;
+        width: 100%;
         .video {
             max-width: 100%;
             width: 100%;
@@ -73,6 +74,10 @@
                 max-width: 9.531vw;
                 height: 9.375vw;
             }
+        }
+        iframe {
+            width: 100%;
+            border-radius: 8px;
         }
     }
 }

@@ -1475,6 +1475,7 @@ a:focus {
   padding: 2px;
   position: relative;
   cursor: pointer;
+  width: 100%;
 }
 .responsible-sex-section__video .video {
   max-width: 100%;
@@ -1496,6 +1497,10 @@ a:focus {
 .responsible-sex-section__video .play img {
   max-width: 9.531vw;
   height: 9.375vw;
+}
+.responsible-sex-section__video iframe {
+  width: 100%;
+  border-radius: 8px;
 }
 
 .featured-section {
