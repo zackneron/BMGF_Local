@@ -34,6 +34,18 @@
         @include lg {
             margin-bottom: 0;
         }
+        &.sexual-health {
+            border-color: var(--unnamed-color-light-green) ;
+            color: var(--unnamed-color-light-green);
+        }
+        &.sex-positivity {
+            border-color: #A8A9FE;
+            color: #A8A9FE;
+        }
+        &.consent-and-agency {
+            border-color: #D3003A;
+            color: #D3003A;
+        }
     }
 }
 

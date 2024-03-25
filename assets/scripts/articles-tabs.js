@@ -4,7 +4,12 @@ function filterArticles(e, article){
   const buttons = document.querySelectorAll(".tab-btn");
   buttons.forEach(button => button.classList.remove("active"));
   const clickedButton = e === 'all' ? document.querySelector('.tab-btn[data-title="all"]') : document.querySelector('.tab-btn[data-title="' + e + '"]');
-  clickedButton.classList.add("active");
+  // clickedButton.classList.add("active");
+  if(window.location.href.includes("article-landing") || window.location.href.includes("articles")) {
+    clickedButton.classList.add("active");
+  } else {
+    clickedButton.classList.remove("active");
+  }
 
   tabPanel = document.getElementsByClassName('tab-item');
   if(article == "all") {
@@ -16,6 +21,7 @@ function filterArticles(e, article){
       addClass(tabPanel[i], "show");
     }
   }
+  
 }
 
 function addClass(element, name){

@@ -576,22 +576,22 @@ body.body--homepage {
     margin-bottom: 1.979vw;
   }
 }
-.banner-section.banner-section--article .banner-content-wrap button.button--article-sex-positivity {
-  border-color: #A8A9FE;
-  color: #A8A9FE;
-}
-.banner-section.banner-section--article .banner-content-wrap button.button--article-consent-and-agency {
-  border-color: #D3003A;
-  color: #D3003A;
-}
 .banner-section.banner-section--article .banner-content-wrap p {
   max-width: 100%;
 }
 .banner-section.banner-sex-positivity {
   background-image: url(../images/Masturbation.png);
 }
+.banner-section.banner-sex-positivity .banner-content-wrap button {
+  border-color: #A8A9FE;
+  color: #A8A9FE;
+}
 .banner-section.banner-consent-and-agency {
   background-image: url(../images/Own-your-agency.png);
+}
+.banner-section.banner-consent-and-agency .banner-content-wrap button {
+  border-color: #D3003A;
+  color: #D3003A;
 }
 .banner-section .banner-content-wrap {
   position: relative;
@@ -1639,6 +1639,18 @@ a:focus {
   .articles__tabs .tab-btn {
     margin-bottom: 0;
   }
+}
+.articles__tabs .tab-btn.sexual-health {
+  border-color: var(--unnamed-color-light-green);
+  color: var(--unnamed-color-light-green);
+}
+.articles__tabs .tab-btn.sex-positivity {
+  border-color: #A8A9FE;
+  color: #A8A9FE;
+}
+.articles__tabs .tab-btn.consent-and-agency {
+  border-color: #D3003A;
+  color: #D3003A;
 }
 
 .tab-item {
