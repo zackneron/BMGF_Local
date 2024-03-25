@@ -56,12 +56,10 @@
             </p>
         </div>
         <div class="mission-section__video">
-            <a href="#" class="play">
+            <button class="play" data-video-id="MhhAox6Zei8">
                 <img src="./assets/images/play-icon.png" alt="Play video">
-            </a>
-            <video class="video" poster="./assets/images/video-placeholder.png" controls="true">
-                <source src="./assets/images/demo.mp4" type="video/mp4">
-            </video>
+            </button>
+            <iframe id="video-frame" width="560" height="315" src="https://www.youtube.com/embed/MhhAox6Zei8?si=5-9oykM83HY2Eb-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
     <section class="features-topics-section">
@@ -156,7 +154,6 @@
                     <a href="#" class="learn-more-btn">
                         Learn More
                         <span class="arrow pink"></span>
-                        <!-- <img src="./assets/images/arrow-right-blue.png" alt="Arrow Right"> -->
                     </a>
                 </div>
             </div>
@@ -227,33 +224,43 @@
     <script src="./assets/scripts/swipper@11.0.7.min.js"></script>
     <script src="./assets/scripts/script.js"></script>
     <script>
+        const playBtn = document.querySelector('.play');
+        const videoFrame = document.querySelector('#video-frame');
+
+        playBtn.addEventListener('click', () => {
+            const videoId = playBtn.dataset.videoId;
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            videoFrame.src = iframeSrc;
+            playBtn.classList.toggle('hidden');
+        });
+        
         const swiper = new Swiper('.swiper', {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        loop: false,
-        autoHeight: true,
-        breakpoints: {
-            320: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            clickable: true,
-            },
-            992: {
             slidesPerView: 2,
-            spaceBetween: 80,
-            clickable: false,
-            }
-        },
-        controller: {
-            inverse: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+            spaceBetween: 10,
+            loop: false,
+            autoHeight: true,
+            breakpoints: {
+                320: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                clickable: true,
+                },
+                992: {
+                slidesPerView: 2,
+                spaceBetween: 80,
+                clickable: false,
+                }
+            },
+            controller: {
+                inverse: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
     </script>
 </body>
