@@ -219,7 +219,7 @@ body.body--homepage {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 9rem 9.8rem 10.3rem;
+  padding: 4rem 2.8rem 4.3rem;
 }
 @media (min-width: 992px) {
   .navbar {
