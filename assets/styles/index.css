@@ -144,7 +144,7 @@ body.body--homepage {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .block {
@@ -1148,6 +1148,11 @@ a:focus {
   max-width: 9.531vw;
   height: 9.375vw;
 }
+.mission-section__video iframe {
+  width: 100%;
+  height: 50.26vw;
+  border-radius: 8px;
+}
 
 .features-topics-section {
   color: var(--unnamed-color-ffffff);
@@ -1764,6 +1769,7 @@ a:focus {
   background-position: left bottom;
   background-size: 185%;
   background-repeat: no-repeat;
+  margin-top: 6rem;
   padding-left: 8.372vw;
   padding-right: 8.372vw;
 }

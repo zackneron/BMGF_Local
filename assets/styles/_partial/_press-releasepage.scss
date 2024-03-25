@@ -4,6 +4,7 @@
     background-position: left bottom;
     background-size: 185%;
     background-repeat: no-repeat;
+    margin-top: 6rem;
     @include spacingX(8.372vw);
     @include md {
         background-size: 100%;
