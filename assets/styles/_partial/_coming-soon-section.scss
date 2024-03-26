@@ -1,0 +1,63 @@
+.coming-soon-section {
+    background-image: url(../images/red-paint-homepage-bottom.png), url(../images/coming-soon-bottom.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: bottom right, bottom left;
+      background-size: 35%, 70%;
+      text-align: center;
+      height: 100vh;
+      @include md {
+        background-size: 35%, 60%;
+        height: auto;
+      }
+    .coming-soon-effect {
+        position: relative;
+        padding: 11.175vw 5.349vw;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: 70%;
+            background-image: url(../images/coming-soon-top.png);
+            left: 0;
+            right: 0;
+            top: 0;
+            background-repeat: no-repeat;
+            background-position: top left;
+            @include md {
+                background-size: 74.104vw;
+            }
+        }
+    }
+    .coming-soon-wrap {
+        border-radius: .8rem;
+        background: var(--unnamed-color-blue);
+        margin: auto;
+        padding: 12.894vw 0;
+        max-width: 81.041vw;
+        height: auto;
+
+        @include sm {
+            height: 40.353vw;
+        }
+        
+    }
+
+    h1 {
+        color: #A6FFFA;
+        text-align: center;
+        font-size: 5.969vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        margin-top: 2.483vw;
+        margin-bottom: 2.101vw;
+    }
+    p {
+        color: var(--unnamed-color-ffffff);
+        font-size: 2.292vw;
+        font-style: normal;
+        font-weight: 325;
+        line-height: 120%;
+    }
+}
