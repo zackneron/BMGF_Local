@@ -4,10 +4,11 @@
     background-position: left bottom;
     background-size: 185%;
     background-repeat: no-repeat;
-    margin-top: 6rem;
+    margin-top: 10rem;
     @include spacingX(8.372vw);
     @include md {
         background-size: 100%;
+        margin-top: 3.125vw;
         @include spacingX(7.031vw);
     }
 

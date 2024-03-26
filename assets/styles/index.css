@@ -459,6 +459,7 @@ body.body--homepage {
 .banner-section.banner-section--aboutpage {
   background-image: url(../images/about-bg-image.png);
   margin-bottom: 27.027vw;
+  padding-top: 22rem;
 }
 .banner-section.banner-section--aboutpage:after {
   content: "";
@@ -488,14 +489,59 @@ body.body--homepage {
   .banner-section.banner-section--aboutpage {
     margin-bottom: 11.979vw;
     position: relative;
+    padding-top: 13.021vw;
   }
 }
 .banner-section.banner-section--news {
-  background-image: url(../images/newspage-bg-mobile.png);
+  background-image: url(../images/news-bg.png);
+  background-position: top center;
+}
+.banner-section.banner-section--news:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-image: url(../images/homepage-navbar-paint.png);
+  left: 0;
+  right: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .banner-section.banner-section--news:before {
+    background-size: 80%;
+  }
 }
 @media (min-width: 992px) {
-  .banner-section.banner-section--news {
-    background-image: url(../images/newspage-bg.png);
+  .banner-section.banner-section--news:before {
+    background-size: 77.104vw;
+  }
+}
+.banner-section.banner-section--news:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-image: url(../images/article-bottom-bg.png);
+  left: 0;
+  right: 0;
+  bottom: -8rem;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .banner-section.banner-section--news:after {
+    background-size: 80%;
+    bottom: -13.531vw;
+  }
+}
+@media (min-width: 992px) {
+  .banner-section.banner-section--news:after {
+    background-size: 77.104vw;
+    bottom: -7.604vw;
   }
 }
 .banner-section.banner-section--articles {
@@ -1786,13 +1832,14 @@ a:focus {
   background-position: left bottom;
   background-size: 185%;
   background-repeat: no-repeat;
-  margin-top: 6rem;
+  margin-top: 10rem;
   padding-left: 8.372vw;
   padding-right: 8.372vw;
 }
 @media (min-width: 992px) {
   .press-release-section {
     background-size: 100%;
+    margin-top: 3.125vw;
     padding-left: 7.031vw;
     padding-right: 7.031vw;
   }
