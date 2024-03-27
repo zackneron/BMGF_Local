@@ -1068,6 +1068,9 @@ a:focus {
 }
 .card.card--with-footer .card__thumbnail {
   position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
 }
 .card.card--with-footer .card__thumbnail img {
   width: 100%;
@@ -2246,6 +2249,9 @@ a:focus {
     margin-bottom: 1.563vw;
   }
 }
+.article-section .article-content-section h4:not(:first-child) {
+  margin-top: 2rem;
+}
 .article-section .article-content-section p {
   font-weight: 300;
   margin-bottom: 4rem;
@@ -2339,13 +2345,24 @@ a:focus {
 }
 @media (min-width: 992px) {
   .coming-soon-section {
-    background-size: 35%, 60%;
-    height: auto;
+    background-size: 25%, 50%;
+  }
+}
+@media (min-width: 1920px) {
+  .coming-soon-section {
+    background-size: 25%, 50%;
   }
 }
 .coming-soon-section .coming-soon-effect {
-  position: relative;
-  padding: 11.175vw 5.349vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3.175vw 5.349vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 .coming-soon-section .coming-soon-effect:before {
   content: "";
@@ -2362,21 +2379,16 @@ a:focus {
 }
 @media (min-width: 992px) {
   .coming-soon-section .coming-soon-effect:before {
-    background-size: 74.104vw;
+    background-size: 60.104vw;
   }
 }
 .coming-soon-section .coming-soon-wrap {
   border-radius: 0.8rem;
   background: var(--unnamed-color-blue);
   margin: auto;
-  padding: 12.894vw 0;
+  padding: 6.894vw 9.894vw;
   max-width: 81.041vw;
   height: auto;
-}
-@media (min-width: 768px) {
-  .coming-soon-section .coming-soon-wrap {
-    height: 40.353vw;
-  }
 }
 .coming-soon-section h1 {
   color: #A6FFFA;

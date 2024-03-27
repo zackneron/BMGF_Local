@@ -183,6 +183,9 @@
         .card__thumbnail {
             position: relative;
             // height: 230px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            overflow: hidden;
             img {
                 width: 100%;
             }

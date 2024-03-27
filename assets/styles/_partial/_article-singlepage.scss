@@ -308,6 +308,9 @@
             @include md {
                 margin-bottom: 1.563vw;
             }
+            &:not(:first-child){
+                margin-top: 2rem;
+            }
         }
         p {
             font-weight: 300;
