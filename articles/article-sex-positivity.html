@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/styles/swipper@11.0.7.min.css">
+    <link rel="stylesheet" href="../assets/styles/index.css">
+    <script src="../assets/scripts/wavesufer.js"></script>
+    <title>BMGF - ForeverWena</title>
+</head>
+<body>
+    <header class="navbar         ">
+        <div class="mobile-only">
+            <a href="/" class="logo">
+                <img src="../assets/images/ForeverWena-logo.svg" alt="ForeverWena logo">
+            </a>
+            <div class="menu-toggle"></div>
+        </div>
+        <nav>
+            <ul class="navbar__menu">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+                <li class="dropdown">
+                    <a href="/news.html" class="active">News</a>
+                    <span class="carrot"></span>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Submenu Item 1</a></li>
+                        <li><a href="#">Submenu Item 2</a></li>
+                        <li><a href="#">Submenu Item 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner-section banner-section--article banner-sex-positivity">
+        <div class="article-breadcrumb">
+            <ul class="breadcrumb-list">
+                <li>News</li>
+                <li>Sex Positivity </li>
+                <li class="current-page">Masturbation</li>
+            </ul>
+            <div class="article-date">20 March 2024</div>
+        </div>
+        <div class="banner-content-wrap">
+            <button class="button article-category-button button--article-sex-positivity">
+                Sex Positivity 
+            </button>
+            <h1>The Power of Masturbation.</h1>
+            <p>
+                Although masturbation is often stigmatised, it can be beneficial to your mental and physical wellbeing, 
+                as well as eliminates risks of STIs and unintended pregnancies. Explore why masturbation can be a form 
+                of self-love within your sexual health journey.
+            </p>
+        </div>
+    </section>
+    <section class="article-section">
+        <div class="articles__tabs" id="articles__tabs">
+            <button class="tab-btn" data-title="all" onclick="filterArticles(this.dataset.title, 'all')">All</button>
+            <button class="tab-btn" data-title="sexual-health" data-category-code="sh" onclick="filterArticles(this.dataset.title, 'sexual-health')">Sexual Health</button>
+            <button class="tab-btn" data-title="sex-positivity" data-category-code="sp" onclick="filterArticles(this.dataset.title, 'sex-positivity')">Sex Positivity</button>
+            <button class="tab-btn" data-title="consent-and-agency" data-category-code="ca" onclick="filterArticles(this.dataset.title, 'consent-and-agency')">Consent & Agency</button>
+        </div>
+        <div class="article-content">
+            <div class="article-podcast-section">
+                <div class="podcast-play">
+                    <button>
+                        <img id="play-media-btn" src="../assets/images/podcast-play-icon.svg" alt="Play Podcast">
+                    </button>
+                    <div class="podcast-audio-container"></div>
+                </div>
+                <p>Podcast: Embracing Self Care: The Power of Masturbation</p>
+            </div>
+            <div class="article-content-section article-content-section--sex-positivity">
+                <div class="article-content-wrap-section">
+                    <h4>Embracing Self Care: The Power of Masturbation</h4>
+                    <p>
+                        When discussing sexual health, there's a topic that is often stigmatised or goes undiscussed: masturbation. 
+                        Masturbation can be a fundamental part of self-care and empowerment, especially when choosing #ForeverWena. 
+                        By embracing and understanding your body, you prioritise your well-being and can make informed decisions 
+                        about your sexual health.
+                    </p>
+
+                    <h4>Understanding the benefits: mental and physical wellness</h4>
+                    <p>
+                        Contrary to misconceptions, masturbation can be beneficial for both mental and physical health. 
+                        When you engage in solo sexual activity, your body releases endorphins, commonly known as the "feel-good" 
+                        hormones.1 These endorphins not only elevate your mood but also act as natural pain relievers, 
+                        reducing stress and anxiety levels.1 Moreover, regular masturbation has been linked to improved 
+                        sleep quality and boosted immune function.1 By indulging in self-pleasure, you're not just satisfying a 
+                        natural human urge; you're also nurturing your overall well-being.
+                    </p>
+
+                    <h4>Exploring your body</h4>
+                    <p>
+                        Masturbation can be a way of understanding what you like sexually, which may help you feel more comfortable. 
+                        And when you’re comfortable with sex, your body, and talking to your partner, you’re more likely to feel 
+                        comfortable protecting yourself against sexually transmitted infections (STIs) and unintended pregnancy. 
+                        In terms of how many times you should be masturbating, there is no rule. Some people masturbate often, 
+                        some every now and then, and some never masturbate - and that’s perfectly fine. Talking to a Healthcare 
+                        Professional may help if you have any questions around masturbation.  
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="single-article-panels articles__tab-panels">
+            <div class="tab-item sexual-health">
+                <div class="card card--with-footer">
+                    <div class="tab-panel content-limit">
+                        <div class="card__thumbnail">
+                            <img src="../assets/images/article-1-green.png" alt="sexual-health">
+                            <div class="article-caption">Sexual Health</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Navigating Healing: When sex turns violent</h3>
+                            <p class="content">
+                                Having sex should be consensual, respectful, and empowering. However, there are instances...
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="../assets/images/article-arrow-rigth-green.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-item sexual-health">
+                <div class="card card--with-footer">
+                    <div class="tab-panel content-limit">
+                        <div class="card__thumbnail">
+                            <img src="../assets/images/article-2-green.png" alt="sexual-health">
+                            <div class="article-caption">Sexual Health</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Navigating Healing: When sex turns violent</h3>
+                            <p class="content">
+                                Having sex should be consensual, respectful, and empowering. However, there are instances...
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="../assets/images/article-arrow-rigth-green.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-item sexual-health">
+                <div class="card card--with-footer">
+                    <div class="tab-panel content-limit">
+                        <div class="card__thumbnail">
+                            <img src="../assets/images/article-3-green.png" alt="sexual-health">
+                            <div class="article-caption">Sexual Health</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="title">Article 3</h3>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="article-date">12 June 2024</span>
+                            <a href="#" class="learn-more-btn">
+                                Learn More
+                                <img src="../assets/images/article-arrow-rigth-green.svg" alt="Arrow right">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button button--more-article m-auto">
+            View More
+            <img src="../assets/images/arrow-down.svg" alt="Arrow right">
+        </button>
+    </section>
+    <footer>
+        <nav class="footer-nav">
+            <div class="footer-logo">
+                <a href="/"><img src="../assets/images/ForeverWena-logo.svg" alt="ForeverWena logo"></a>
+            </div>
+            <div class="footer__menu">
+                <ul class="page-list">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/news.html">News</a></li>
+                    <li><a href="#">whatsApp Bot</a></li>
+                </ul>
+                <ul class="social-media">
+                    <li><a href="/">
+                        <img src="../assets/images/facebook.svg" alt="Facebook" />
+                    </a></li>
+                    <li><a href="#">
+                        <img src="../assets/images/twitter.svg" alt="Twitter" />
+                    </a></li>
+                    <li><a href="#">
+                        <img src="../assets/images/instagram.svg" alt="Instagram" />
+                    </a></li>
+                    <li><a href="#">
+                        <img src="../assets/images/youtube.svg" alt="Youtube" />
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="copyright">
+            <span>All Rights Reserved | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>  | <a href="#">Legal</a></span>
+        </div>
+    </footer>
+    <script src="../assets/scripts/script.js"></script>
+    <script src="../assets/scripts/articles-tabs.js"></script>
+    <script>
+        let podcastPlayBtn = document.querySelector('#play-media-btn');
+
+        const wavesurfer = WaveSurfer.create({
+        container: '.podcast-audio-container',
+        waveColor: 'rgb(255, 255, 255)',
+        progressColor: 'rgba(255, 255, 255, 0.50)',
+        height: 44,
+        barRadius: 4,
+        cursorWidth: 0,
+        barWidth: 4, 
+        responsive: true,
+        url: '../assets/images/audio.mp3'
+        })
+
+        // wavesurfer.on('interaction', () => {
+        // wavesurfer.play()
+        
+        // });
+        wavesurfer.load();
+        podcastPlayBtn.onclick = function(){
+            wavesurfer.playPause();
+            if(podcastPlayBtn.src.includes('')){
+                podcastPlayBtn.classList.add('hidden');
+                // this will be pause icon
+                // podcastPlayBtn.src = "../assets/images/podcast-play-icon.svg"
+            } else {
+                podcastPlayBtn.classList.remove('hidden');
+                // this will be play icon
+                // podcastPlayBtn.src = "../assets/images/podcast-play-icon.svg"
+            }
+        }
+        wavesurfer.on('finish', function(){
+            podcastPlayBtn.src ="../assets/images/podcast-play-icon.svg";
+            podcastPlayBtn.classList.remove('hidden');
+            wavesurfer.stop();
+        })
+    </script>
+</body>
+</html>
