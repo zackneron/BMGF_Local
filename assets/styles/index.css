@@ -2136,7 +2136,7 @@ a:focus {
 }
 @media (min-width: 992px) {
   .article-section .article-podcast-section .podcast-play {
-    max-width: 26.042vw;
+    max-width: 30.042vw;
   }
 }
 .article-section .article-podcast-section .podcast-play button {
