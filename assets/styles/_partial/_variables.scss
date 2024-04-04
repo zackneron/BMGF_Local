@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  font-family: "Gotham Light";
+  src: url(../fonts/GothamLight.ttf);
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
   font-family: "Gotham Book";
   src: url(../fonts/GothamBook.ttf);
   font-display: auto;
@@ -27,5 +36,6 @@
 
 $font-default: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $gotham-medium: "Gotham Medium", $font-default;
+$gotham-light: "Gotham Light", $font-default;
 $gotham-bold: "Gotham Bold", $font-default;
 $gotham-book: "Gotham Book", $font-default;

@@ -130,7 +130,7 @@
         // align-items: center;
         // flex-direction: column;
         // gap: 5rem;
-        text-align: center;
+        text-align: left;
         margin-bottom: 8rem;
         display: none;
         @include md {
@@ -290,16 +290,31 @@
         @include lg {
             margin-bottom: 7.031vw;
         }
+        & iframe {
+            @include borderGradient(180deg, var(--unnamed-color-light-green));
+            width: 100%;
+            height: 30rem;
+            @include md {
+                height: 31.25vw;
+            }
+        }
+
         &.article-content-section--sex-positivity {
             @include cardBorderGradient(330deg, #A8A9FE, 27%, 43%);
             @include md {
                 @include cardBorderGradient(345deg, #A8A9FE, 27%, 43%);
+            }
+            & iframe {
+                @include borderGradient(180deg, #A8A9FE);
             }
         }
         &.article-content-section--consent-and-agency {
             @include cardBorderGradient(330deg, var(--unnamed-color-pink), 27%, 43%);
             @include md {
                 @include cardBorderGradient(345deg, var(--unnamed-color-pink), 27%, 43%);
+            }
+            & iframe {
+                @include borderGradient(180deg, var(--unnamed-color-pink));
             }
         }
         h4 {

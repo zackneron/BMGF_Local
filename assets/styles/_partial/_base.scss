@@ -27,6 +27,10 @@ body {
     }
 }
 
+p {
+  font-family: $gotham-light;
+}
+
 .text-color-light-purple {
   color: var(--unnamed-color-d9b8fc);
 }

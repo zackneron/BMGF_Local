@@ -38,9 +38,16 @@
 
         .page-list {
             font-size: 2rem;
+            font-family: $gotham-light;
             display: flex;
             flex-direction: column;
             gap: 1.4rem;
+
+            li {
+                &:hover {
+                    color: var(--unnamed-color-ffffff);
+                }
+            }
         }
 
         .social-media {
@@ -57,6 +64,7 @@
     padding: 2.4rem 4.8rem;
     text-align: center;
     font-size: 1.4rem;
+    font-family: $gotham-light;
     line-height: 28px;
 
     a {

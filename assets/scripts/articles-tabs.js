@@ -1,4 +1,4 @@
-if(new URL(window.location.href).pathname.includes("/articles/") || new URL(window.location.href).pathname.includes("/article-landing/") ){
+if(!new URL(window.location.href).pathname.endsWith("/articles.html") || new URL(window.location.href).pathname.includes("/articles/") || new URL(window.location.href).pathname.includes("/article-landing/") ){
   filterArticles("", "all");
 } else {
   filterArticles("all", "all");
