@@ -76,10 +76,10 @@ p {
     -webkit-box-shadow: inset 120px 120px 124px var(--unnamed-color-light-green);
   }
   ::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 76px var(--unnamed-color-ffffff);
+    -webkit-box-shadow: inset 0 0 76px #383838;
   }
   ::-khtml-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 76px var(--unnamed-color-ffffff);
+    -webkit-box-shadow: inset 0 0 76px #383838;
   }
   ::selection {
     background: rgba(48, 30, 100, 0.7);

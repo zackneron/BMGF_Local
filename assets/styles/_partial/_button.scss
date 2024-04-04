@@ -35,6 +35,11 @@ a {
         color: var(--unnamed-color-ffffff);
         background-color: var(--unnamed-color-blue);
     }
+    &.button--secondary {
+        color: var(--unnamed-color-ffffff);
+        background-color: transparent;
+        border: 1px solid var(--unnamed-color-ffffff);
+    }
 }
 
 .learn-more-btn {

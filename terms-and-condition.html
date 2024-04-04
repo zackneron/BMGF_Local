@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/styles/swipper@11.0.7.min.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <title>BMGF - ForeverWena</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="mobile-only">
+            <a href="/" class="logo">
+                <img src="./assets/images/ForeverWenaLogoWeb.svg" alt="ForeverWena logo">
+            </a>
+            <div class="menu-toggle"></div>
+        </div>
+        <nav>
+            <ul class="navbar__menu">
+                <li>
+                    <a href="/" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+                <li class="dropdown">
+                    <a href="/news.html">News</a>
+                    <span class="carrot"></span>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Submenu Item 1</a></li>
+                        <li><a href="#">Submenu Item 2</a></li>
+                        <li><a href="#">Submenu Item 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="legal-section">
+        <div class="legal-menu">
+            <ul class="page-list">
+                <li><a href="legal-information.html">Legal information</a></li>
+                <li><a href="terms-and-condition.html" class="active">TERMS & CONDITIONS</a></li>
+            </ul>
+        </div>
+        <div class="legal-content">
+            <h4>Acceptance of Terms</h4>
+            <ul>
+                <li>By accessing or using [Your Sexual Health Website], you agree to comply with and be bound by these Terms 
+                    and Conditions. If you do not agree with any part of these terms, please do not use the website.</li>
+            </ul>
+            <h4>Age Restriction</h4>
+            <ul>
+                <li>This website is intended for users who are 18 years of age or older. 
+                    By accessing this website, you confirm that you are of legal age.</li>
+            </ul>
+            <h4>Medical Disclaimer</h4>
+            <ul>
+                <li>The information provided on [Your Sexual Health Website] is for educational purposes only and is not a 
+                    substitute for professional medical advice. Consult with a qualified healthcare provider for personalized 
+                    advice regarding your health.</li>
+            </ul>
+            <h4>User Conduct</h4>
+            <ul>
+                <li>Users agree not to engage in any unlawful or prohibited activities on the website, including but not 
+                    limited to the dissemination of harmful content, harassment, or the violation of privacy.</li>
+            </ul>
+            <div class="legal-cta">
+                <button class="button button--secondary">Decline</button>
+                <button class="button">Accept</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav class="footer-nav">
+            <div class="footer-logo">
+                <a href="/"><img src="./assets/images/ForeverWenaLogoWeb.svg" alt="ForeverWena logo"></a>
+            </div>
+            <div class="footer__menu">
+                <ul class="page-list">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/news.html">News</a></li>
+                    <li><a href="#">whatsApp Bot</a></li>
+                </ul>
+                <ul class="social-media">
+                    <li><a href="https://www.facebook.com/foreverwenaza">
+                        <img src="./assets/images/facebook.svg" alt="Facebook" />
+                    </a></li>
+                    <li><a href="https://twitter.com/ForeverWenaZA">
+                        <img src="./assets/images/twitter.svg" alt="Twitter" />
+                    </a></li>
+                    <li><a href="https://www.instagram.com/foreverwenaza/">
+                        <img src="./assets/images/instagram.svg" alt="Instagram" />
+                    </a></li>
+                    <li><a href="https://www.youtube.com/@ForeverWenaZA">
+                        <img src="./assets/images/youtube.svg" alt="Youtube" />
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="copyright">
+            <span>All Rights Reserved | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>  | <a href="#">Legal</a></span>
+        </div>
+    </footer>
+    <script src="./assets/scripts/swipper@11.0.7.min.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+    <script>
+        const playBtn = document.querySelector('.play');
+        const videoFrame = document.querySelector('#video-frame');
+
+        playBtn.addEventListener('click', () => {
+            const videoId = playBtn.dataset.videoId;
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            videoFrame.src = iframeSrc;
+            playBtn.classList.toggle('hidden');
+        });
+        
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            loop: false,
+            autoHeight: true,
+            breakpoints: {
+                320: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                clickable: true,
+                },
+                992: {
+                slidesPerView: 2,
+                spaceBetween: 80,
+                clickable: false,
+                }
+            },
+            controller: {
+                inverse: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
