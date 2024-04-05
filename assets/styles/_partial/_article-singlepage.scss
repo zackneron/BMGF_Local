@@ -229,8 +229,58 @@
             margin-bottom: 13.3rem;
         }
         @include xlg {
-            margin-top: 12.083vw;
+            // margin-top: 12.083vw;
             margin-bottom: 6.927vw;
+        }
+        .podcast-video {
+            position: relative;
+            @include md {
+                width: 70%;
+                margin: auto;
+            }
+            & iframe {
+                width: 100%;
+                height: 30rem;
+                @include md {
+                    height: 31.25vw;
+                }
+            }
+            .play {
+                display: block;
+                margin: 0 auto;
+                left: 50%;
+                margin-left: -4.323vw;
+                position: absolute;
+                top: 50%;
+                margin-top: -4.167vw;
+                z-index: 1;
+                &.active {
+                    color: transparent;
+                }
+                img {
+                    max-width: 9.531vw;
+                    height: 9.375vw;
+                }
+            }
+            &.podcast-video--sexual-health {
+                & iframe {
+                    @include borderGradient(180deg, var(--unnamed-color-light-green));
+                }
+            }
+            &.podcast-video--sex-positivity {
+                & iframe {
+                    @include borderGradient(180deg, #A8A9FE);
+                }
+            }
+            &.podcast-video--consent-and-agency {
+                & iframe {
+                    @include borderGradient(180deg, var(--unnamed-color-pink));
+                }
+            }
+            // &__item {
+            //     background-color: var(--unnamed-color-black22);
+            //     border-radius: 0.8rem;
+            // }
         }
         .podcast-play {
             margin: auto;

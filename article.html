@@ -70,11 +70,18 @@
         </div>
         <div class="article-content">
             <div class="article-podcast-section">
+                <div class="podcast-video podcast-video--sexual-health">
+                    <div class="podcast-video__item">
+                        <button class="play" data-video-id="MhhAox6Zei8">
+                            <img src="./assets/images/play-icon.png" alt="Play video">
+                        </button>
+                        <iframe id="video-frame" width="100%" height="100%" src="https://www.youtube.com/embed/MhhAox6Zei8?si=5-9oykM83HY2Eb-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+                    </div>
+                </div>
                 <div class="podcast-play">
                     <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1669274382&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
                 </div>
-                <p>Podcast: Navigating Healing: When sex turns violent.</p>
             </div>
             <div class="article-content-section">
                 <div class="article-content-wrap-section">
@@ -219,5 +226,16 @@
     </footer>
     <script src="./assets/scripts/script.js"></script>
     <script src="./assets/scripts/articles-tabs.js"></script>
+    <script>
+        const playBtn = document.querySelector('.play');
+        const videoFrame = document.querySelector('#video-frame');
+
+        playBtn.addEventListener('click', () => {
+            const videoId = playBtn.dataset.videoId;
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            videoFrame.src = iframeSrc;
+            playBtn.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
