@@ -81,4 +81,9 @@
             border-radius: .8rem;
         }
     }
+    .card-sidethumb-wrapper .card-sidethumb-content {
+        &.news {
+            background-color: var(--unnamed-color-black22);
+        }
+    }
 }

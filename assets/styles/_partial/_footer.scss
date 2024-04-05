@@ -44,8 +44,16 @@
             gap: 1.4rem;
 
             li {
-                &:hover {
-                    color: var(--unnamed-color-ffffff);
+                
+                a {
+                    text-decoration: none;
+                    &,
+                    &:visited {
+                        color: var(--unnamed-color-light-green);
+                    }
+                    &:hover {
+                        color: var(--unnamed-color-ffffff);
+                    }
                 }
             }
         }
@@ -69,5 +77,6 @@
 
     a {
         text-decoration: underline;
+        color: var(--unnamed-color-ffffff);
     }
 }

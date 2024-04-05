@@ -2,6 +2,8 @@
 @import '_partial/typography';
 @import '_partial/breakpoints';
 @import '_partial/mixin';
+// Mac Browser
+@import '_partial/mac-browser';
 @import '_partial/base';
 @import '_partial/navbar';
 @import '_partial/banner';
@@ -20,3 +22,4 @@
 @import '_partial/coming-soon-section';
 @import '_partial/theme';
 @import '_partial/footer';
+

@@ -195,7 +195,7 @@
             border-top-left-radius: 0;
             border-top-right-radius: 0;
             @include md {
-                height: 26.3rem;
+                min-height: 26.3rem;
                 padding: 2.396vw 2.708vw 0;
                 margin-bottom: 6rem;
             }

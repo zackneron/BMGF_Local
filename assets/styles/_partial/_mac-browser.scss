@@ -1,0 +1,24 @@
+
+/* Target Safari */
+// @media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0) {
+//     .button {
+//         display: inline-block;
+//         svg,
+//         img {
+//             position: relative;
+//             top: .4rem;
+//         }
+//     }
+// }
+
+/* Target Chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) {
+    .button {
+        display: inline-block;
+        svg,
+        img {
+            position: relative;
+            top: .4rem;
+        }
+    }
+}

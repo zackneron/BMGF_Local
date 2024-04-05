@@ -2,8 +2,9 @@ button,
 a {
     cursor: pointer;
     transition: all .3s linear;
-    
-
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
     &:focus {
         outline: 1px dotted #FC4DC5;
     }
@@ -39,6 +40,11 @@ a {
         color: var(--unnamed-color-ffffff);
         background-color: transparent;
         border: 1px solid var(--unnamed-color-ffffff);
+    }
+    svg,
+    img {
+        position: relative;
+        top: 0;
     }
 }
 

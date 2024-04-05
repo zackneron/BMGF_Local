@@ -3,10 +3,10 @@ $white: #FFFFFF;
 
 .pink-theme {
     h3,p {
-        color: $pink;
+        color: $pink !important;
     }
     button {
-        color: $white;
-        background-color: $pink;
+        color: $white !important;
+        background-color: $pink !important;
     }
 }

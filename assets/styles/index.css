@@ -120,6 +120,18 @@ TO BE USED AS FOLLOW IN A PARTIAL FILE
 }
 
 */
+/* Target Safari */
+/* Target Chrome */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+  .button {
+    display: inline-block;
+  }
+  .button svg,
+  .button img {
+    position: relative;
+    top: 0.4rem;
+  }
+}
 html {
   font-size: 62.5%;
   min-height: 100%;
@@ -808,6 +820,9 @@ button,
 a {
   cursor: pointer;
   transition: all 0.3s linear;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
 }
 button:focus,
 a:focus {
@@ -858,6 +873,11 @@ a:focus {
   color: var(--unnamed-color-ffffff);
   background-color: transparent;
   border: 1px solid var(--unnamed-color-ffffff);
+}
+.button svg,
+.button img {
+  position: relative;
+  top: 0;
 }
 
 .learn-more-btn {
@@ -1099,7 +1119,7 @@ a:focus {
 }
 @media (min-width: 992px) {
   .card.card--with-footer .card-body {
-    height: 26.3rem;
+    min-height: 26.3rem;
     padding: 2.396vw 2.708vw 0;
     margin-bottom: 6rem;
   }
@@ -1952,6 +1972,9 @@ a:focus {
   background-color: var(--unnamed-color-black22);
   border-radius: 0.8rem;
 }
+.press-release-section .card-sidethumb-wrapper .card-sidethumb-content.news {
+  background-color: var(--unnamed-color-black22);
+}
 
 .article-breadcrumb {
   margin-bottom: 5.405vw;
@@ -2243,6 +2266,9 @@ a:focus {
     height: 31.25vw;
   }
 }
+.article-section .article-content-section a, .article-section .article-content-section h4 {
+  color: var(--unnamed-color-light-green);
+}
 .article-section .article-content-section.article-content-section--sex-positivity {
   padding: 2px;
   background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, #A8A9FE 27%, transparent 43%);
@@ -2264,6 +2290,9 @@ a:focus {
           backdrop-filter: blur(5rem);
   padding: 2px;
 }
+.article-section .article-content-section.article-content-section--sex-positivity a, .article-section .article-content-section.article-content-section--sex-positivity h4 {
+  color: #A8A9FE;
+}
 .article-section .article-content-section.article-content-section--consent-and-agency {
   padding: 2px;
   background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(330deg, var(--unnamed-color-pink) 27%, transparent 43%);
@@ -2284,6 +2313,9 @@ a:focus {
   -webkit-backdrop-filter: blur(5rem);
           backdrop-filter: blur(5rem);
   padding: 2px;
+}
+.article-section .article-content-section.article-content-section--consent-and-agency a, .article-section .article-content-section.article-content-section--consent-and-agency h4 {
+  color: var(--unnamed-color-pink);
 }
 .article-section .article-content-section h4 {
   font-weight: 700;
@@ -2578,11 +2610,11 @@ a:focus {
 }
 
 .pink-theme h3, .pink-theme p {
-  color: #FF3877;
+  color: #FF3877 !important;
 }
 .pink-theme button {
-  color: #FFFFFF;
-  background-color: #FF3877;
+  color: #FFFFFF !important;
+  background-color: #FF3877 !important;
 }
 
 .footer-nav {
@@ -2635,7 +2667,13 @@ a:focus {
   flex-direction: column;
   gap: 1.4rem;
 }
-.footer-nav .footer__menu .page-list li:hover {
+.footer-nav .footer__menu .page-list li a {
+  text-decoration: none;
+}
+.footer-nav .footer__menu .page-list li a, .footer-nav .footer__menu .page-list li a:visited {
+  color: var(--unnamed-color-light-green);
+}
+.footer-nav .footer__menu .page-list li a:hover {
   color: var(--unnamed-color-ffffff);
 }
 .footer-nav .footer__menu .social-media {
@@ -2655,4 +2693,5 @@ a:focus {
 }
 .copyright a {
   text-decoration: underline;
+  color: var(--unnamed-color-ffffff);
 }/*# sourceMappingURL=index.css.map */
