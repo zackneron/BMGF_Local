@@ -29,7 +29,7 @@
         padding-bottom: 13.021vw;
     }
     &.banner-section--homepage {
-        background-image: url(../images/homepage-banner.png);
+        background-image: url(../images/do-it-for-lifetime.png);
         // background-size: 122vh;
         background-position: 85% 0;
         margin-bottom: 7.7rem;
@@ -274,5 +274,20 @@
             margin-bottom: 13.021vw;
             font-size: var(--font-size-18);
         }
+        svg,
+        img {
+            height: var(--font-size-14);
+            width: var(--font-size-14);
+            @include md {
+                height: var(--font-size-18);
+            width: var(--font-size-18);
+            }
+        }
+    }
+    .sexual-options {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: var(--unnamed-color-light-green);
     }
 }

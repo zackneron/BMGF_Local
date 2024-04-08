@@ -50,6 +50,7 @@
         border-top-left-radius: .8rem;
         border-top-right-radius: .8rem;
         @include md {
+            min-height: 63.3rem;
             padding: 8.177vw 3.438vw 9.063vw;
         }
     }

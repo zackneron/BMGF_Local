@@ -9,6 +9,12 @@
   .swiper-slide {
     background-color: var(--unnamed-color-3b1468);
     border-radius: 40px;
+
+    &.card {
+      .title {
+        min-height: 15.5rem;
+      }
+    }
   }
 }
 

@@ -1,0 +1,16 @@
+/* Detect Mac Firefox 25 or newer */
+@supports (-moz-osx-font-smoothing:auto) { 
+    @media all and (-moz-overlay-scrollbars) {
+        .button {
+            display: inline-block;
+            svg,
+            img {
+                position: relative;
+                top: .4rem;
+            }
+        }
+        .mission-section__content .our-mission {
+            margin-bottom: 2rem;
+        }
+    }
+ }

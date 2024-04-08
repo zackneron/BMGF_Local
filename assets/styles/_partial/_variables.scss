@@ -35,7 +35,7 @@
 }
 
 $font-default: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$gotham-medium: "Gotham Medium", $font-default;
-$gotham-light: "Gotham Light", $font-default;
-$gotham-bold: "Gotham Bold", $font-default;
-$gotham-book: "Gotham Book", $font-default;
+$gotham-medium: -apple-system, BlinkMacSystemFont, "Gotham Medium", $font-default;
+$gotham-light: -apple-system, BlinkMacSystemFont, "Gotham Light", $font-default;
+$gotham-bold: -apple-system, BlinkMacSystemFont, "Gotham Bold", $font-default;
+$gotham-book: -apple-system, BlinkMacSystemFont, "Gotham Book", $font-default;
