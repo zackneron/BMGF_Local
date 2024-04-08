@@ -81,9 +81,36 @@
             border-radius: .8rem;
         }
     }
-    .card-sidethumb-wrapper .card-sidethumb-content {
-        &.news {
-            background-color: var(--unnamed-color-black22);
+    .card-sidethumb-wrapper {
+        .card-sidethumb-thumb {
+            &.news-thumb {
+                img {
+                    min-height: 45.521vw;
+                    width: 100%;
+                }
+            }
+        }
+        .card-sidethumb-content {
+            &.news {
+                background-color: var(--unnamed-color-black22);
+                @include md {
+                    @include spacing(5.833vw, 2.604vw);
+                    justify-content: space-between;
+                    gap: 0;
+                }
+    
+                h3 {
+                    @include md {
+                        margin-bottom: 8.854vw;
+                    }
+                }
+                p {
+                    @include md {
+                        margin-bottom: 7.552vw;
+                    }
+                }
+            }
         }
     }
+    
 }
