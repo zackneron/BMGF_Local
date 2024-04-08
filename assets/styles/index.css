@@ -1350,6 +1350,7 @@ a:focus {
 .healthies-foot .healthies-foot__cards .healthies-card {
   transition: all 0.3s linear;
   position: relative;
+  min-height: 51.6rem;
   padding: 2px;
   background: radial-gradient(circle at 100% 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, var(--unnamed-color-ffffff) 0, var(--unnamed-color-ffffff) 3px, transparent 3px) 100% 100%/8px 8px no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat, linear-gradient(var(--unnamed-color-ffffff), var(--unnamed-color-ffffff)) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat, linear-gradient(120deg, var(--unnamed-color-pink) 0%, transparent 30%);
   border-radius: 0.8rem;
@@ -1391,11 +1392,15 @@ a:focus {
   border-width: 2px;
   border-radius: 8px;
   height: 100%;
+  min-height: 51.6rem;
 }
 @media (min-width: 992px) {
   .healthies-foot .healthies-foot__cards .healthies-foot__card {
     padding: 2.292vw;
   }
+}
+.healthies-foot .healthies-foot__cards .healthies-foot__card img {
+  height: 8.3rem;
 }
 .healthies-foot .healthies-foot__cards .healthies-foot__card h3 {
   margin-top: 5.7rem;

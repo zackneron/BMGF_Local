@@ -164,6 +164,7 @@
         .healthies-card {
             transition: all .3s linear;
             position: relative;
+            min-height: 51.6rem;
             @include cardBorderGradient(120deg, var(--unnamed-color-pink), 0%, 30%);
             &:hover {
                 transform: scale(1.15);
@@ -194,8 +195,13 @@
             border-width: 2px;
             border-radius: 8px;
             height: 100%;
+            min-height: 51.6rem;
             @include md {
                 padding: 2.292vw;
+            }
+
+            img {
+                height: 8.3rem;
             }
             
             h3 {
