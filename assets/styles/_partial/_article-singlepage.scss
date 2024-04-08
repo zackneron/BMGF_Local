@@ -387,11 +387,22 @@
                 margin-top: 2rem;
             }
         }
+        p,
+        td {
+            color: #D9D9D9;
+        }
         p {
             font-weight: 300;
             margin-bottom: 4rem;
             @include md {
                 margin-bottom: 3.646vw;
+            }
+        }
+        table {
+            width: 100%;
+
+            td {
+                width: 50%;
             }
         }
     }
