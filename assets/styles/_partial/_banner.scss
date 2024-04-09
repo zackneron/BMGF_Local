@@ -29,7 +29,7 @@
         padding-bottom: 13.021vw;
     }
     &.banner-section--homepage {
-        background-image: url(../images/do-it-for-lifetime.png);
+        // background-image: url(../images/do-it-for-lifetime.png);
         // background-size: 122vh;
         background-position: 85% 0;
         margin-bottom: 7.7rem;
@@ -66,7 +66,7 @@
         }
     }
     &.banner-section--aboutpage {
-        background-image: url(../images/about-bg-image.png);
+        // background-image: url(../images/about-bg-image.png);
         margin-bottom: 27.027vw;
         padding-top: 22rem;
         &:after {
@@ -96,7 +96,7 @@
         }
     }
     &.banner-section--news {
-        background-image: url(../images/news-bg.png);
+        // background-image: url(../images/news-bg.png);
         background-position: top center;
         &:before {
             content: '';
@@ -143,7 +143,7 @@
         }
     }
     &.banner-section--articles {
-        background-image: url(../images/articles-bg-banner.png);
+        // background-image: url(../images/articles-bg-banner.png);
         background-position: 50% 0;
         &:after {
             content: '';
@@ -166,7 +166,7 @@
             }
         }
         @include md {
-            background-image: url(../images/articles-bg-banner.png);
+            // background-image: url(../images/articles-bg-banner.png);
         }
 
         & .banner-content-wrap {
@@ -180,7 +180,7 @@
         }
     }
     &.banner-section--article {
-        background-image: url(../images/article-banner-bg.png);
+        // background-image: url(../images/article-banner-bg.png);
         background-position: top center;
         object-fit: cover;
         padding-top: 5rem;
@@ -217,7 +217,7 @@
         }
     }
     &.banner-sex-positivity {
-        background-image: url(../images/Masturbation.png);
+        // background-image: url(../images/Masturbation.png);
         .banner-content-wrap {
             button {
                 border-color: #A8A9FE;
@@ -226,7 +226,7 @@
         }
     }
     &.banner-consent-and-agency {
-        background-image: url(../images/Own-your-agency.png);
+        // background-image: url(../images/Own-your-agency.png);
         .banner-content-wrap {
             button {
                 border-color: #D3003A;
@@ -267,12 +267,15 @@
     .button {
         margin-bottom: 18.535vw;
         font-size: var(--font-size-14);
+        width: 18.8rem;
+        gap: 2rem;
         @include tablet {
             font-size: 1.8rem;
         }
         @include md {
             margin-bottom: 13.021vw;
             font-size: var(--font-size-18);
+            width: 28rem;
         }
         svg,
         img {
@@ -280,7 +283,7 @@
             width: var(--font-size-14);
             @include md {
                 height: var(--font-size-18);
-            width: var(--font-size-18);
+                width: var(--font-size-18);
             }
         }
     }

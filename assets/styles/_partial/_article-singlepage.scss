@@ -245,6 +245,10 @@
                     height: 31.25vw;
                 }
             }
+            .video-container {
+                position: relative;
+                height: 100%;
+            }
             .play {
                 display: block;
                 margin: 0 auto;
@@ -261,6 +265,13 @@
                     max-width: 9.531vw;
                     height: 9.375vw;
                 }
+            }
+            .video-placeholder {
+                position: absolute;
+                left: 0;
+                right: auto;
+                width: 100%;
+                height: 100%;
             }
             &.podcast-video--sexual-health {
                 & iframe {

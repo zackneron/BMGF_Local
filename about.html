@@ -70,10 +70,13 @@
                     </p>
                 </div>
                 <div class="responsible-sex-section__video">
-                    <button class="play" data-video-id="MhhAox6Zei8">
-                        <img src="./assets/images/play-icon.png" alt="Play video">
-                    </button>
-                    <iframe id="video-frame" width="100%" height="100%" src="https://www.youtube.com/embed/MhhAox6Zei8?si=5-9oykM83HY2Eb-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <button class="play" data-video-id="MhhAox6Zei8">
+                            <img src="./assets/images/play-icon.png" alt="Play video">
+                        </button>
+                        <iframe id="video-frame" width="100%" height="100%" src="https://www.youtube.com/embed/MhhAox6Zei8?si=5-9oykM83HY2Eb-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <img class="video-placeholder" src="./assets/images/video-placeholder.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,5 +161,18 @@
         </div>
     </footer>
     <script src="./assets/scripts/script.js"></script>
+    <script>
+        const playBtn = document.querySelector('.play');
+        const videoFrame = document.querySelector('#video-frame');
+        const videoPlaceholder = document.querySelector('.video-placeholder');
+
+        playBtn.addEventListener('click', () => {
+            const videoId = playBtn.dataset.videoId;
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            videoFrame.src = iframeSrc;
+            playBtn.classList.toggle('hidden');
+            videoPlaceholder.classList.add('hidden');
+        });
+    </script>
 </body>
 </html>

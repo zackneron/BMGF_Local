@@ -235,7 +235,7 @@ p {
 }
 @media (min-width: 992px) {
   .navbar {
-    padding: 4.688vw 5.104vw 5.365vw;
+    padding: 4.588vw 5.104vw 5.165vw;
   }
 }
 .navbar--homepage {
@@ -428,7 +428,6 @@ p {
   }
 }
 .banner-section.banner-section--homepage {
-  background-image: url(../images/do-it-for-lifetime.png);
   background-position: 85% 0;
   margin-bottom: 7.7rem;
 }
@@ -469,7 +468,6 @@ p {
   }
 }
 .banner-section.banner-section--aboutpage {
-  background-image: url(../images/about-bg-image.png);
   margin-bottom: 27.027vw;
   padding-top: 22rem;
 }
@@ -505,7 +503,6 @@ p {
   }
 }
 .banner-section.banner-section--news {
-  background-image: url(../images/news-bg.png);
   background-position: top center;
 }
 .banner-section.banner-section--news:before {
@@ -557,7 +554,6 @@ p {
   }
 }
 .banner-section.banner-section--articles {
-  background-image: url(../images/articles-bg-banner.png);
   background-position: 50% 0;
 }
 .banner-section.banner-section--articles:after {
@@ -585,11 +581,6 @@ p {
   }
 }
 @media (min-width: 992px) {
-  .banner-section.banner-section--articles {
-    background-image: url(../images/articles-bg-banner.png);
-  }
-}
-@media (min-width: 992px) {
   .banner-section.banner-section--articles .banner-content-wrap {
     max-width: 85vw;
   }
@@ -598,7 +589,6 @@ p {
   }
 }
 .banner-section.banner-section--article {
-  background-image: url(../images/article-banner-bg.png);
   background-position: top center;
   -o-object-fit: cover;
      object-fit: cover;
@@ -637,15 +627,9 @@ p {
 .banner-section.banner-section--article .banner-content-wrap p {
   max-width: 100%;
 }
-.banner-section.banner-sex-positivity {
-  background-image: url(../images/Masturbation.png);
-}
 .banner-section.banner-sex-positivity .banner-content-wrap button {
   border-color: #A8A9FE;
   color: #A8A9FE;
-}
-.banner-section.banner-consent-and-agency {
-  background-image: url(../images/Own-your-agency.png);
 }
 .banner-section.banner-consent-and-agency .banner-content-wrap button {
   border-color: #D3003A;
@@ -690,6 +674,8 @@ p {
 .banner-section .button {
   margin-bottom: 18.535vw;
   font-size: var(--font-size-14);
+  width: 18.8rem;
+  gap: 2rem;
 }
 @media only screen and (max-width: 992px) and (min-width: 768px) {
   .banner-section .button {
@@ -700,6 +686,7 @@ p {
   .banner-section .button {
     margin-bottom: 13.021vw;
     font-size: var(--font-size-18);
+    width: 28rem;
   }
 }
 .banner-section .button svg,
@@ -1186,6 +1173,7 @@ a:focus {
   text-transform: uppercase;
   opacity: 0.5;
   margin-bottom: 0.1rem;
+  display: inline-block;
 }
 @media (min-width: 992px) {
   .mission-section__content .our-mission {
@@ -1195,13 +1183,11 @@ a:focus {
 }
 .mission-section__content h2 {
   font-size: var(--font-size-40);
-  margin-bottom: 0.7rem;
   font-weight: 700;
 }
 @media (min-width: 992px) {
   .mission-section__content h2 {
     font-size: var(--font-size-77);
-    margin-bottom: 3.3rem;
     line-height: 110%;
   }
 }
@@ -1227,6 +1213,10 @@ a:focus {
   max-width: 100%;
   width: 100%;
 }
+.mission-section__video .video-container {
+  position: relative;
+  height: 100%;
+}
 .mission-section__video .play {
   display: block;
   margin: 0 auto;
@@ -1235,6 +1225,7 @@ a:focus {
   position: absolute;
   top: 50%;
   margin-top: -4.167vw;
+  z-index: 1;
 }
 .mission-section__video .play.active {
   color: transparent;
@@ -1247,6 +1238,13 @@ a:focus {
   width: 100%;
   height: 50.26vw;
   border-radius: 8px;
+}
+.mission-section__video .video-placeholder {
+  position: absolute;
+  left: 0;
+  right: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .features-topics-section {
@@ -1576,6 +1574,16 @@ a:focus {
   position: relative;
   cursor: pointer;
   width: 100%;
+  height: 38rem;
+}
+@media (min-width: 992px) {
+  .responsible-sex-section__video {
+    height: 32.292vw;
+  }
+}
+.responsible-sex-section__video .video-container {
+  position: relative;
+  height: 100%;
 }
 .responsible-sex-section__video .video {
   max-width: 100%;
@@ -1590,6 +1598,7 @@ a:focus {
   position: absolute;
   top: 50%;
   margin-top: -4.167vw;
+  z-index: 1;
 }
 .responsible-sex-section__video .play.active {
   color: transparent;
@@ -1601,6 +1610,13 @@ a:focus {
 .responsible-sex-section__video iframe {
   width: 100%;
   border-radius: 8px;
+}
+.responsible-sex-section__video .video-placeholder {
+  position: absolute;
+  left: 0;
+  right: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .featured-section {
@@ -1986,8 +2002,32 @@ a:focus {
   background-color: var(--unnamed-color-black22);
   border-radius: 0.8rem;
 }
+.press-release-section .card-sidethumb-wrapper .card-sidethumb-thumb.news-thumb img {
+  min-height: 45.521vw;
+  width: 100%;
+}
 .press-release-section .card-sidethumb-wrapper .card-sidethumb-content.news {
   background-color: var(--unnamed-color-black22);
+}
+@media (min-width: 992px) {
+  .press-release-section .card-sidethumb-wrapper .card-sidethumb-content.news {
+    padding-left: 2.604vw;
+    padding-right: 2.604vw;
+    padding-top: 5.833vw;
+    padding-bottom: 5.833vw;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+@media (min-width: 992px) {
+  .press-release-section .card-sidethumb-wrapper .card-sidethumb-content.news h3 {
+    margin-bottom: 8.854vw;
+  }
+}
+@media (min-width: 992px) {
+  .press-release-section .card-sidethumb-wrapper .card-sidethumb-content.news p {
+    margin-bottom: 7.552vw;
+  }
 }
 
 .article-breadcrumb {
@@ -2201,6 +2241,10 @@ a:focus {
     height: 31.25vw;
   }
 }
+.article-section .article-podcast-section .podcast-video .video-container {
+  position: relative;
+  height: 100%;
+}
 .article-section .article-podcast-section .podcast-video .play {
   display: block;
   margin: 0 auto;
@@ -2217,6 +2261,13 @@ a:focus {
 .article-section .article-podcast-section .podcast-video .play img {
   max-width: 9.531vw;
   height: 9.375vw;
+}
+.article-section .article-podcast-section .podcast-video .video-placeholder {
+  position: absolute;
+  left: 0;
+  right: auto;
+  width: 100%;
+  height: 100%;
 }
 .article-section .article-podcast-section .podcast-video.podcast-video--sexual-health iframe {
   background: linear-gradient(180deg, var(--unnamed-color-light-green), transparent);
@@ -2398,6 +2449,10 @@ a:focus {
 .article-section .article-content-section h4:not(:first-child) {
   margin-top: 2rem;
 }
+.article-section .article-content-section p,
+.article-section .article-content-section td {
+  color: #D9D9D9;
+}
 .article-section .article-content-section p {
   font-weight: 300;
   margin-bottom: 4rem;
@@ -2406,6 +2461,12 @@ a:focus {
   .article-section .article-content-section p {
     margin-bottom: 3.646vw;
   }
+}
+.article-section .article-content-section table {
+  width: 100%;
+}
+.article-section .article-content-section table td {
+  width: 50%;
 }
 .article-section .button--more-article {
   display: none;
